@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214b3d">
+  <meta name="description" content="海嘉圣诞义卖：发现蕾丝饰品、串珠手作、花叶小物与编织好物，把一份特别的圣诞心意带回家。">
+  <title>海嘉圣诞义卖 · BIBA Christmas Charity Market</title>
+  <link rel="icon" type="image/webp" href="assets/images/biba-school-crest.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="m12 2-5 7h3l-6 7h6v5h4v-5h6l-6-7h3z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.6 6.9L22 9.4l-5.7 4.7 1.8 7.2-6.1-4-6.1 4 1.8-7.2L2 9.4l7.4-.5z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13"/><path d="M12 8C4 9 3 2 7 3c3 0 5 5 5 5Zm0 0c8 1 9-6 5-5-3 0-5 5-5 5Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4ZM20 2v4m-2-2h4"/></symbol>
+    <symbol id="i-flower" viewBox="0 0 24 24"><path d="M12 8c-6-9-11 0-5 3-10 3-3 11 2 6 0 10 10 7 8 1 8 5 11-5 4-7 4-8-6-10-7-3" transform="translate(-1 0) scale(.9)"/><circle cx="11" cy="12" r="2.6"/></symbol>
+    <symbol id="i-beads" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2.5"/><circle cx="18.8" cy="8" r="2.5"/><circle cx="18.8" cy="16" r="2.5"/><circle cx="12" cy="20" r="2.5"/><circle cx="5.2" cy="16" r="2.5"/><circle cx="5.2" cy="8" r="2.5"/></symbol>
+    <symbol id="i-basket" viewBox="0 0 24 24"><path d="m3 10 3 11h12l3-11ZM2 10h20M8 10l4-8 4 8M9 14v4m6-4v4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18m-14 4h3m4 0h3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#market" data-i18n="skip">跳到好物集市</a>
+  <div class="announcement"><span aria-hidden="true">✧</span><span data-i18n="announcement">让每一份小小心意，点亮这个圣诞</span><span aria-hidden="true">✧</span></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="海嘉圣诞义卖 · BIBA Christmas Charity Market">
+        <img class="school-crest" src="assets/images/biba-school-crest.webp" width="457" height="480" alt="海嘉学校校徽 · BIBA school crest">
+        <span><strong data-i18n="brand">海嘉圣诞义卖</strong><small>2026 BIBA PTA · SANTA CHARITY SHOP</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航" data-label="navigation">
+        <a class="active" href="#market" data-i18n="navMarket">逛逛集市</a>
+        <a href="#charity" data-i18n="navCharity">关于义卖</a>
+        <a href="#visit" data-i18n="navVisit">到场指南</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="语言 / Language">
+          <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="true">中</button><span aria-hidden="true">/</span><button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="wishlist-button" id="wishlist-toggle" type="button" aria-pressed="false"><svg class="icon"><use href="#i-heart"/></svg><span class="wishlist-label" data-i18n="wishlist">心愿单</span><span id="wishlist-count" class="count">0</span></button>
+        <button class="bag-button" id="bag-toggle" type="button" aria-label="义卖袋与结算" data-label="bagLabel"><svg class="icon"><use href="#i-basket"/></svg><span class="bag-label" data-i18n="bag">义卖袋</span><span id="bag-count" class="count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="tiny-star">✦</span><span data-i18n="heroEyebrow">海嘉 · 冬日里的温暖相聚</span></div>
+          <h1 id="hero-title"><span data-i18n="heroLine1">把心意，</span><br><span class="red" data-i18n="heroLine2">装进圣诞。</span><svg class="title-spark" viewBox="0 0 50 50" aria-hidden="true"><path d="M24 1c0 18-5 23-23 23 18 0 23 5 23 23 0-18 5-23 23-23C29 24 24 19 24 1Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></h1>
+          <p class="hero-english" data-i18n="heroScript">Little gifts. A little Christmas magic.</p>
+          <p class="hero-description" data-i18n="heroDescription">用一件手作，收藏冬日的温暖。<br>来海嘉圣诞义卖，发现好物，也遇见心意。</p>
+          <div class="hero-buttons"><a class="button button-red" href="#market"><span data-i18n="explore">开启圣诞寻宝</span><svg class="icon"><use href="#i-arrow"/></svg></a><a class="text-link" href="#visit"><span data-i18n="visitLink">查看集市指南</span><span aria-hidden="true">↗</span></a></div>
+          <div class="hero-footnote donation-badge"><svg class="icon"><use href="#i-heart"/></svg><span data-i18n="heroNote">特别的礼物，送给特别的你</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="art-circle" aria-hidden="true"></div>
+          <svg class="hanging-star" viewBox="0 0 70 140" aria-hidden="true"><path d="M35 0v70" fill="none" stroke="currentColor"/><path d="m35 65 7.5 21 22 1-17 14 6 22-18.5-13-18.5 13 6-22-17-14 22-1Z" fill="#d7b271" stroke="currentColor"/></svg>
+          <span class="art-spark spark-one" aria-hidden="true">✧</span><span class="art-spark spark-two" aria-hidden="true">✦</span>
+          <div class="hero-main-photo"><img src="assets/images/186.webp" width="1206" height="1600" alt="红绿相间的手工编织篮" data-alt="heroImage" fetchpriority="high"><div class="photo-note"><span data-i18n="heroPhotoLabel">一篮子，圣诞心意。</span><small>HANDMADE WITH LOVE</small></div></div>
+          <button class="polaroid polaroid-left" type="button" data-product="rose-lace"><span class="tape" aria-hidden="true"></span><img src="assets/images/174-thumb.webp" alt="粉红蕾丝项链与耳饰" data-alt="roseImage" width="450" height="800"><span data-i18n="polaroidLeft">小小手作，满满心意</span><span class="polaroid-heart" aria-hidden="true">♡</span></button>
+          <button class="polaroid polaroid-right" type="button" data-product="rainbow-beads"><img src="assets/images/187-thumb.webp" alt="彩色串珠手链" data-alt="beadImage" width="603" height="800"><span data-i18n="polaroidRight">把快乐串起来</span></button>
+          <div class="round-stamp" aria-hidden="true"><span>A LITTLE GIFT</span><svg class="icon"><use href="#i-gift"/></svg><span>A LOT OF LOVE</span></div>
+          <svg class="little-pine" viewBox="0 0 120 170" aria-hidden="true"><path d="M60 7 29 64h15L15 112h33l-6 42h36l-6-42h33L76 64h15Z" fill="#335744"/><path d="M59 49v121m-1-72L37 84m24-4 15-12m-17 55L32 105m28 35 28-23" stroke="#f6f1e7" stroke-width="2" fill="none"/><path d="m61 0 3 8 9 1-7 6 2 9-7-5-8 5 3-9-7-6 9-1Z" fill="#be9b5b"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="values-strip"><div class="container values-inner"><div><svg class="icon"><use href="#i-spark"/></svg><span data-i18n="value1">手作的温度</span><small data-i18n="value1Sub">Made with care</small></div><span class="value-divider"></span><div><svg class="icon"><use href="#i-gift"/></svg><span data-i18n="value2">有心意的礼物</span><small data-i18n="value2Sub">Gifts with a story</small></div><span class="value-divider"></span><div><svg class="icon"><use href="#i-tree"/></svg><span data-i18n="value3">属于海嘉的圣诞</span><small data-i18n="value3Sub">Together at Haijia</small></div></div></div>
+
+    <section class="charity-section container" id="charity" aria-labelledby="charity-title">
+      <button class="charity-poster" id="poster-open" type="button" aria-label="查看义卖海报大图" data-label="viewPoster">
+        <img src="assets/images/biba-charity-poster-2026.webp" width="1320" height="1216" alt="2026 海嘉 PTA 圣诞义卖市集活动海报" data-alt="posterAlt" loading="lazy">
+        <span><span data-i18n="posterCaption">2026 海嘉 PTA · 圣诞义卖市集</span><span aria-hidden="true">↗</span></span>
+      </button>
+      <div class="charity-copy">
+        <p class="eyebrow" data-i18n="charityEyebrow">2026 BIBA PTA · SANTA CHARITY SHOP</p>
+        <h2 id="charity-title" data-i18n="charityTitle">把一份喜欢，<br>变成一份善意。</h2>
+        <p data-i18n="charityBody">这不只是一份圣诞礼物，也是一份送向远方的温暖。挑选心仪的手作，让小小的心意，汇成更多善意。</p>
+        <div class="donation-promise"><strong>100<span>%</span></strong><div><b data-i18n="donationTitle">义卖收入，全部捐出</b><p data-i18n="donationBody">每一笔义卖收入，都将用于捐赠。</p></div><svg class="icon"><use href="#i-heart"/></svg></div>
+        <a class="text-link" href="#market"><span data-i18n="charityLink">挑一份礼物，献一份爱心</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <section class="market-section container" id="market" aria-labelledby="market-title">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="marketEyebrow">THE CHRISTMAS COLLECTION</p><h2 id="market-title" data-i18n="marketTitle">来挑一份，心动好物<span class="heading-star" aria-hidden="true">✳</span></h2><p class="section-intro" data-i18n="marketIntro">每一件都有自己的故事，哪一件会成为你的圣诞礼物？</p></div><div class="collection-note"><span class="tiny-star">✦</span><span data-i18n="collectionNote">发现小美好 · 收藏大心意</span></div></div>
+      <div class="filter-row">
+        <div class="category-filters" id="category-filters" role="group" aria-label="好物分类" data-label="categories"></div>
+        <form class="search-box" role="search" id="search-form"><svg class="icon"><use href="#i-search"/></svg><input type="search" id="search-input" placeholder="寻找心仪好物…" aria-label="搜索好物" data-placeholder="searchPlaceholder" data-label="searchLabel" autocomplete="off"><button type="button" id="search-clear" class="search-clear" hidden aria-label="清除搜索" data-label="clearSearch"><svg class="icon"><use href="#i-close"/></svg></button></form>
+      </div>
+      <div class="results-meta"><span id="results-count" role="status" aria-live="polite"></span><button type="button" id="clear-filters" hidden data-i18n="resetFilters">查看全部好物 ↗</button><span class="results-hint" data-i18n="resultsHint">遇见喜欢的，点亮小爱心</span></div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><svg class="icon"><use href="#i-gift"/></svg><h3 id="empty-title"></h3><p id="empty-description"></p><button type="button" class="button button-green" id="empty-reset" data-i18n="keepExploring">继续逛逛集市</button></div>
+      <div class="load-more-wrap"><button type="button" class="button button-outline" id="load-more"><span data-i18n="loadMore">发现更多好物</span><span aria-hidden="true">↓</span></button><p id="collection-end" hidden data-i18n="collectionEnd">愿你找到那份刚刚好的心意。</p></div>
+    </section>
+
+    <section class="story-section container" id="story" aria-labelledby="story-title"><div class="story-photo"><img src="assets/images/189.webp" width="1206" height="1600" alt="双手正在串起暖色珠子" data-alt="storyImage" loading="lazy"><span class="story-photo-label">THE JOY OF MAKING</span></div><div class="story-copy"><p class="eyebrow" data-i18n="storyEyebrow">SMALL THINGS, BIG HEART</p><h2 id="story-title" data-i18n="storyTitle">礼物的美好，<br>从一双手开始。</h2><p data-i18n="storyBody">一颗珠子，一缕丝线，一点奇思妙想。<br>从细细编织的蕾丝，到色彩斑斓的串珠，<br>那些被认真对待的小细节，让礼物有了温度。</p><p class="story-closing" data-i18n="storyClosing">这个圣诞，把亲手制作的美好带回家。</p><a class="text-link" href="#market"><span data-i18n="storyLink">发现手作好物</span><svg class="icon"><use href="#i-arrow"/></svg></a><svg class="story-flower" viewBox="0 0 110 110" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M55 41C18-16 5 58 41 55 0 90 69 122 56 69c42 46 79-22 14-15 47-39-26-77-15-13Z"/><circle cx="56" cy="55" r="12"/><circle cx="56" cy="55" r="5"/></g></svg></div></section>
+
+    <section class="visit-section container" id="visit" aria-labelledby="visit-title"><div class="visit-heading"><p class="eyebrow" data-i18n="visitEyebrow">MEET YOU AT THE MARKET</p><h2 id="visit-title" data-i18n="visitTitle">圣诞集市，见！</h2><p data-i18n="visitIntro">带上好奇心，来收集冬日的小确幸。</p></div><div class="visit-grid"><div class="visit-item"><svg class="icon"><use href="#i-calendar"/></svg><div><span data-i18n="dateLabel">活动时间</span><strong id="event-date"></strong><small data-i18n="dateNote">敬请留意学校后续通知</small></div></div><div class="visit-item"><svg class="icon"><use href="#i-pin"/></svg><div><span data-i18n="locationLabel">集市地点</span><strong id="event-location"></strong><small data-i18n="locationNote">具体场地将随活动通知公布</small></div></div><div class="visit-item"><svg class="icon"><use href="#i-heart"/></svg><div><span data-i18n="tipLabel">逛集市小贴士</span><strong data-i18n="tipTitle">先收藏，再来相遇</strong><small data-i18n="tipNote">心愿单会保存在当前浏览器中</small></div></div></div><div class="visit-bottom"><svg class="icon"><use href="#i-gift"/></svg><p data-i18n="visitNote">本页为好物展示，具体款式、材质、价格及供应情况请以现场信息为准。</p><span aria-hidden="true">✧</span></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#home"><img class="school-crest" src="assets/images/biba-school-crest.webp" width="457" height="480" alt="BIBA"><span><strong data-i18n="brand">海嘉圣诞义卖</strong><small>MADE WITH LOVE. SHARED WITH JOY.</small></span></a><p data-i18n="footerWish">愿你的圣诞，有礼物，也有温度。</p><a href="#home" class="back-top"><span data-i18n="backTop">回到顶部</span> ↑</a></div></footer>
+
+  <dialog id="product-dialog" aria-labelledby="dialog-title"><button type="button" class="dialog-close icon-button" id="dialog-close" aria-label="关闭详情" data-label="closeDetail"><svg class="icon"><use href="#i-close"/></svg></button><div class="dialog-layout"><div class="dialog-gallery"><div class="dialog-main-image"><img id="dialog-image" src="assets/images/174.webp" alt=""><button type="button" class="gallery-arrow gallery-prev" id="gallery-prev" aria-label="上一张" data-label="previousImage">←</button><button type="button" class="gallery-arrow gallery-next" id="gallery-next" aria-label="下一张" data-label="nextImage">→</button><span id="gallery-count"></span></div><div class="gallery-thumbs" id="gallery-thumbs"></div></div><div class="dialog-info"><p class="eyebrow" id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-subtitle"></p><p id="dialog-description"></p><div class="detail-note"><svg class="icon"><use href="#i-gift"/></svg><p data-i18n="detailNote">喜欢这份心意？先加入心愿单，集市当天再来发现。价格与供应情况以现场为准。</p></div><div class="detail-price"><span data-i18n="charityPrice">义卖价格</span><strong id="dialog-price"></strong></div><button type="button" class="button button-red" id="dialog-add-bag"><svg class="icon"><use href="#i-basket"/></svg><span data-i18n="addBag">加入义卖袋</span></button><div class="detail-bag-feedback" id="detail-bag-feedback" hidden><span id="dialog-bag-feedback" role="status" aria-live="polite"></span><button type="button" id="dialog-view-bag"><span data-i18n="viewBag">查看义卖袋</span> →</button></div><button type="button" class="button button-outline dialog-save" id="dialog-save"></button><p class="detail-caption" data-i18n="detailCaption">展示名称根据照片拟定，具体信息请现场确认。</p></div></div></dialog>
+  <dialog id="poster-dialog" aria-label="圣诞义卖活动海报" data-label="posterDialogLabel">
+    <button type="button" class="dialog-close icon-button" id="poster-close" aria-label="关闭海报" data-label="closePoster"><svg class="icon"><use href="#i-close"/></svg></button>
+    <img src="assets/images/biba-charity-poster-2026.webp" width="1320" height="1216" alt="2026 海嘉 PTA 圣诞义卖市集活动海报" data-alt="posterAlt">
+  </dialog>
+  <dialog id="checkout-dialog" aria-labelledby="checkout-title">
+    <div class="checkout-header"><div><p class="eyebrow" data-i18n="checkoutEyebrow">A LITTLE GIFT. A WORLD OF GOOD.</p><h2 id="checkout-title" data-i18n="checkoutTitle">我的爱心义卖袋</h2></div><button type="button" class="icon-button" id="checkout-close" aria-label="关闭结算" data-label="closeCheckout"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <div class="checkout-charity"><svg class="icon"><use href="#i-heart"/></svg><span data-i18n="checkoutCharity">本次义卖收入将 100% 捐出，感谢你的爱心。</span></div>
+    <div class="bag-empty" id="bag-empty"><svg class="icon"><use href="#i-basket"/></svg><h3 data-i18n="bagEmptyTitle">把喜欢的好物，装进爱心义卖袋</h3><p data-i18n="bagEmptyBody">选一份礼物，让圣诞的温暖传递得更远。</p><button type="button" class="button button-green" id="bag-explore" data-i18n="keepExploring">继续逛逛集市</button></div>
+    <div class="checkout-layout" id="checkout-content">
+      <section class="bag-items-section" aria-label="已选好物" data-label="bagItemsLabel"><div class="bag-list-heading"><h3 data-i18n="selectedGifts">已选好物</h3><span id="bag-item-count"></span></div><div id="bag-items"></div><p class="bag-note" data-i18n="bagNote">义卖袋保存在当前浏览器中；加入好物不代表已经下单或预留库存。</p></section>
+      <section class="payment-panel" aria-labelledby="payment-title">
+        <div class="checkout-total"><span data-i18n="totalLabel">义卖合计</span><strong id="checkout-total" aria-live="polite"></strong></div>
+        <p id="checkout-status" class="checkout-status" role="status"></p>
+        <h3 id="payment-title" data-i18n="paymentTitle">扫码支付</h3>
+        <div class="payment-methods" role="group" aria-label="支付方式" data-label="paymentMethods"><button type="button" data-payment="wechat" aria-pressed="true"><span class="payment-mark wechat" aria-hidden="true">W</span><span data-i18n="wechat">微信支付</span></button><button type="button" data-payment="alipay" aria-pressed="false"><span class="payment-mark alipay" aria-hidden="true">A</span><span data-i18n="alipay">支付宝</span></button></div>
+        <div class="payment-unavailable" id="payment-unavailable"><svg class="icon"><use href="#i-gift"/></svg><strong data-i18n="paymentPending">付款暂未开放</strong><p data-i18n="paymentPendingBody">商品价格与收款码公布后，即可在这里扫码付款。</p></div>
+        <button type="button" class="button button-red" id="show-payment-code" disabled data-i18n="showPaymentCode">查看收款码</button>
+        <div id="payment-code-panel" hidden><p class="payee-line"><span data-i18n="payeeLabel">收款方</span><strong id="payment-payee"></strong></p><p class="payment-amount-line"><span data-i18n="payExactly">请支付</span><strong id="payment-amount"></strong></p><img id="payment-code-image" alt="收款二维码" data-alt="paymentCodeAlt"><p id="payment-code-error" hidden data-i18n="paymentCodeError">收款码暂时无法加载，请联系现场工作人员。</p><a id="payment-code-download" class="text-link" download><span data-i18n="savePaymentCode">保存收款码</span> ↓</a><p class="scan-instructions" data-i18n="scanInstructions">请核对收款方与金额，用对应支付应用扫码，或保存图片后从相册识别。支付后请向现场工作人员出示凭证，核验后领取好物。</p><p class="manual-check-note" data-i18n="manualCheck">付款状态以支付应用及现场核验为准，本页面不会自动确认到账。</p></div>
+        <p class="payment-footnote" data-i18n="paymentFootnote">所有义卖收入都将捐出。谢谢你，让善意发生。</p>
+      </section>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-note">请开启 JavaScript 以使用分类、双语切换与心愿单。Please enable JavaScript to browse the collection.</div></noscript>
+</body>
+</html>
