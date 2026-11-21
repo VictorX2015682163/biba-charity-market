@@ -8,7 +8,7 @@
   <title>海嘉圣诞义卖 · BIBA Christmas Charity Market</title>
   <link rel="icon" type="image/webp" href="assets/images/biba-school-crest.webp">
   <link rel="stylesheet" href="styles.css?v=815d5fbf52">
-  <script src="data.js?v=283d90050f" defer></script>
+  <script src="data.js?v=60f78a789c" defer></script>
   <script src="app.js?v=7d2e03b075" defer></script>
 </head>
 <body>
@@ -160,7 +160,7 @@
         <div class="payment-methods" role="group" aria-label="支付方式" data-label="paymentMethods"><button type="button" data-payment="wechat" aria-pressed="true"><span class="payment-mark wechat" aria-hidden="true">W</span><span data-i18n="wechat">微信支付</span></button><button type="button" data-payment="alipay" aria-pressed="false"><span class="payment-mark alipay" aria-hidden="true">A</span><span data-i18n="alipay">支付宝</span></button></div>
         <div class="payment-unavailable" id="payment-unavailable"><svg class="icon"><use href="#i-gift"/></svg><strong data-i18n="paymentPending">付款暂未开放</strong><p data-i18n="paymentPendingBody">商品价格与收款码公布后，即可在这里扫码付款。</p></div>
         <button type="button" class="button button-red" id="show-payment-code" disabled data-i18n="showPaymentCode">查看收款码</button>
-        <div id="payment-code-panel" hidden><p class="payee-line"><span data-i18n="payeeLabel">收款方</span><strong id="payment-payee"></strong></p><p class="payment-amount-line"><span data-i18n="payExactly">请支付</span><strong id="payment-amount"></strong></p><img id="payment-code-image" alt="收款二维码" data-alt="paymentCodeAlt"><p id="payment-code-error" hidden data-i18n="paymentCodeError">收款码暂时无法加载，请联系现场工作人员。</p><a id="payment-code-download" class="text-link" download><span data-i18n="savePaymentCode">保存收款码</span> ↓</a><p class="scan-instructions" data-i18n="scanInstructions">请核对收款方与金额，用对应支付应用扫码，或保存图片后从相册识别。支付后请向现场工作人员出示凭证，核验后领取好物。</p><p class="manual-check-note" data-i18n="manualCheck">付款状态以支付应用及现场核验为准，本页面不会自动确认到账。</p></div>
+        <div id="payment-code-panel" hidden><p class="payee-line"><span data-i18n="payeeLabel">收款方</span><strong id="payment-payee"></strong></p><p class="payment-amount-line"><span data-i18n="payExactly">应付金额</span><strong id="payment-amount"></strong></p><img id="payment-code-image" alt="收款二维码" data-alt="paymentCodeAlt"><p id="payment-code-error" hidden data-i18n="paymentCodeError">收款码暂时无法加载，请联系现场工作人员。</p><a id="payment-code-download" class="text-link" download><span data-i18n="savePaymentCode">保存收款码</span> ↓</a><p class="scan-instructions" data-i18n="scanInstructions">用对应的支付应用扫码，或保存图片后从相册识别。请核对收款方，并按上方应付金额足额付款。</p><p class="manual-check-note" data-i18n="manualCheck">领取前请出示付款凭证。摊位工作人员核对实际到账金额，确认足额后交付商品。</p></div>
         <p class="payment-footnote" data-i18n="paymentFootnote">所有义卖收入都将捐出。谢谢你，让善意发生。</p>
       </section>
     </div>
