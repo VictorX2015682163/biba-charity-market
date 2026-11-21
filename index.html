@@ -7,9 +7,9 @@
   <meta name="description" content="2026 海嘉 PTA 圣诞义卖。棱边饰品、串珠手链、花叶小物与编织好物，每款 100 元，义卖收入全部捐出。">
   <title>海嘉圣诞义卖 · BIBA Christmas Charity Market</title>
   <link rel="icon" type="image/webp" href="assets/images/biba-school-crest.webp">
-  <link rel="stylesheet" href="styles.css?v=815d5fbf52">
-  <script src="data.js?v=60f78a789c" defer></script>
-  <script src="app.js?v=7d2e03b075" defer></script>
+  <link rel="stylesheet" href="styles.css?v=207f4a2e3a">
+  <script src="data.js?v=1ce33d8a4b" defer></script>
+  <script src="app.js?v=d234030f90" defer></script>
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -159,7 +159,17 @@
         <h3 id="payment-title" data-i18n="paymentTitle">扫码支付</h3>
         <div class="payment-methods" role="group" aria-label="支付方式" data-label="paymentMethods"><button type="button" data-payment="wechat" aria-pressed="true"><span class="payment-mark wechat" aria-hidden="true">W</span><span data-i18n="wechat">微信支付</span></button><button type="button" data-payment="alipay" aria-pressed="false"><span class="payment-mark alipay" aria-hidden="true">A</span><span data-i18n="alipay">支付宝</span></button></div>
         <div class="payment-unavailable" id="payment-unavailable"><svg class="icon"><use href="#i-gift"/></svg><strong data-i18n="paymentPending">付款暂未开放</strong><p data-i18n="paymentPendingBody">商品价格与收款码公布后，即可在这里扫码付款。</p></div>
-        <button type="button" class="button button-red" id="show-payment-code" disabled data-i18n="showPaymentCode">查看收款码</button>
+        <button type="button" class="button button-red" id="show-payment-code" disabled data-i18n="showPaymentCode">确认下单并查看收款码</button>
+        <p id="order-error" class="order-error" role="alert" hidden></p>
+        <div id="checkout-order" tabindex="-1" hidden>
+          <span data-i18n="orderNumberLabel">义卖订单号</span>
+          <strong id="order-number"></strong>
+          <p id="order-pending" data-i18n="orderPending">待核验 · 请向工作人员出示订单号和付款凭证。</p>
+          <div id="order-paid" hidden>
+            <p data-i18n="orderPaid">工作人员已核验付款。</p>
+            <button type="button" class="button button-outline" id="new-order" data-i18n="newOrder">再买一单</button>
+          </div>
+        </div>
         <div id="payment-code-panel" hidden><p class="payee-line"><span data-i18n="payeeLabel">收款方</span><strong id="payment-payee"></strong></p><p class="payment-amount-line"><span data-i18n="payExactly">应付金额</span><strong id="payment-amount"></strong></p><img id="payment-code-image" alt="收款二维码" data-alt="paymentCodeAlt"><p id="payment-code-error" hidden data-i18n="paymentCodeError">收款码暂时无法加载，请联系现场工作人员。</p><a id="payment-code-download" class="text-link" download><span data-i18n="savePaymentCode">保存收款码</span> ↓</a><p class="scan-instructions" data-i18n="scanInstructions">用对应的支付应用扫码，或保存图片后从相册识别。请核对收款方，并按上方应付金额足额付款。</p><p class="manual-check-note" data-i18n="manualCheck">领取前请出示付款凭证。摊位工作人员核对实际到账金额，确认足额后交付商品。</p></div>
         <p class="payment-footnote" data-i18n="paymentFootnote">所有义卖收入都将捐出。谢谢你，让善意发生。</p>
       </section>

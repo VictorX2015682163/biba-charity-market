@@ -104,3 +104,24 @@ html[lang=en] .charity-copy h2{font-size:39px;line-height:1.4}html[lang=en] .don
   margin: 6px 6px -42px 0;
   z-index: 1;
 }
+
+#checkout-order {
+  margin-top: 16px;
+  padding: 11px 13px;
+  color: var(--green);
+  background: #f8f5e9;
+  border: 1px solid #d4dcca;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+#order-number {
+  display: block;
+  margin-top: 3px;
+  font: 600 16px/1.5 ui-monospace, monospace;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+#checkout-order p { margin: 5px 0 0; }
+#new-order { margin-top: 10px; }
+.order-error { font-size: 12px; line-height: 1.7; color: #902f29; }

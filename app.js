@@ -4,6 +4,9 @@
   const categories = window.MARKET_CATEGORIES;
   const translations = window.MARKET_TRANSLATIONS;
   const config = window.MARKET_CONFIG;
+  const orderEndpoint = ['localhost', '127.0.0.1'].includes(location.hostname)
+    ? 'http://127.0.0.1:8787/api/orders'
+    : 'https://biba-charity-orders.xuevictor0.workers.dev/api/orders';
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const storage = {
@@ -29,7 +32,7 @@
     lang: storage.get('haijia-language') === 'en' ? 'en' : 'zh',
     category: 'all', query: '', wishlistOnly: false, visible: 8,
     saved: new Set(saved), currentProduct: null, imageIndex: 0,
-    bag, paymentMethod: 'wechat', paymentCodeVisible: false,
+    bag, paymentMethod: 'wechat', checkoutOrder: null, orderBusy: false, orderError: '',
   };
   const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const t = key => translations[state.lang][key] || key;
@@ -38,6 +41,9 @@
   let toastTimer;
   let lastFocused;
   let checkoutOrigin;
+  let checkoutVersion = 0;
+  let orderDraft;
+  try { orderDraft = JSON.parse(storage.get('haijia-order-draft-v1')); } catch { /* Ignore damaged drafts. */ }
   const hasPrice = p => Number.isSafeInteger(p.priceCents) && p.priceCents > 0;
   const currencyOptions = { style: 'currency', currency: 'CNY', currencyDisplay: 'narrowSymbol' };
   const currencyFormatters = {
@@ -221,7 +227,7 @@
     const payment = event.target.closest('[data-payment]');
     if (payment && ['wechat', 'alipay'].includes(payment.dataset.payment)) {
       state.paymentMethod = payment.dataset.payment;
-      state.paymentCodeVisible = false;
+      resetOrderPanel();
       return renderCheckout();
     }
     const favorite = event.target.closest('[data-favorite]');
@@ -316,6 +322,8 @@
     const summary = bagSummary();
     const payment = paymentDetails();
     const ready = summary.priced && payment.ready;
+    const order = state.checkoutOrder;
+    const showCode = ready && order && !order.paid;
     $('#bag-count').textContent = summary.quantity;
     $('#bag-toggle').setAttribute('aria-label', `${t('bagLabel')} (${summary.quantity})`);
     $('#bag-empty').hidden = summary.items.length > 0;
@@ -330,10 +338,17 @@
     $('#checkout-status').textContent = t(!summary.priced ? 'unpricedStatus' : !payment.ready ? 'paymentNotReady' : 'paymentReady');
     $$('[data-payment]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.payment === state.paymentMethod)));
     $('#payment-unavailable').hidden = ready;
-    $('#show-payment-code').disabled = !ready;
-    $('#show-payment-code').hidden = ready && state.paymentCodeVisible;
-    $('#payment-code-panel').hidden = !(ready && state.paymentCodeVisible);
-    if (ready && state.paymentCodeVisible) {
+    $('#show-payment-code').disabled = !ready || state.orderBusy;
+    $('#show-payment-code').hidden = Boolean(order);
+    $('#show-payment-code').textContent = t(state.orderBusy ? 'orderSubmitting' : 'showPaymentCode');
+    $('#order-error').hidden = !state.orderError;
+    $('#order-error').textContent = state.orderError ? t(state.orderError) : '';
+    $('#checkout-order').hidden = !order;
+    $('#order-number').textContent = order?.number || '';
+    $('#order-pending').hidden = !showCode;
+    $('#order-paid').hidden = !order?.paid;
+    $('#payment-code-panel').hidden = !showCode;
+    if (showCode) {
       $('#payment-payee').textContent = payment.payee;
       $('#payment-amount').textContent = money(summary.total);
       const image = $('#payment-code-image');
@@ -353,8 +368,59 @@
     }
   }
 
+  function resetOrderPanel() {
+    checkoutVersion++;
+    state.checkoutOrder = null;
+    state.orderError = '';
+  }
+
+  async function submitOrder(startNew = false) {
+    const summary = bagSummary();
+    if (!summary.priced || !paymentDetails().ready || state.orderBusy) return;
+    const items = summary.items.map(product => ({ id: product.id, quantity: state.bag[product.id] }));
+    const signature = JSON.stringify([items, summary.total]);
+    const version = checkoutVersion;
+    state.orderBusy = true;
+    state.orderError = '';
+    if (startNew) state.checkoutOrder = null;
+    renderCheckout();
+    try {
+      if (startNew || orderDraft?.signature !== signature || !orderDraft.requestKey) {
+        orderDraft = { signature, requestKey: crypto.randomUUID() };
+        storage.set('haijia-order-draft-v1', JSON.stringify(orderDraft));
+      }
+      const response = await fetch(orderEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ requestKey: orderDraft.requestKey, items, expectedTotalCents: summary.total }),
+        signal: AbortSignal.timeout(10000),
+      });
+      if (version !== checkoutVersion) return;
+      if (response.status === 409) {
+        state.orderError = 'orderChanged';
+        return;
+      }
+      if (!response.ok) throw new Error('Order creation failed');
+      const order = await response.json();
+      if (version !== checkoutVersion) return;
+      if (!/^BIBA-[A-F0-9]{12}$/.test(order.number) || order.totalCents !== summary.total || typeof order.paid !== 'boolean') {
+        throw new Error('Invalid order response');
+      }
+      state.checkoutOrder = order;
+    } catch {
+      if (version === checkoutVersion) state.orderError = 'orderFailed';
+    } finally {
+      state.orderBusy = false;
+      renderCheckout();
+      if (version === checkoutVersion && state.checkoutOrder) {
+        $('#checkout-order').focus({ preventScroll: true });
+        $('#checkout-order').scrollIntoView({ block: 'nearest', behavior: 'instant' });
+      }
+    }
+  }
+
   function persistBag() {
-    state.paymentCodeVisible = false;
+    resetOrderPanel();
     const saved = storage.set('haijia-bag-v1', JSON.stringify(state.bag));
     renderCheckout();
     renderBagFeedback();
@@ -391,7 +457,7 @@
 
   function openCheckout(origin) {
     checkoutOrigin = origin;
-    state.paymentCodeVisible = false;
+    resetOrderPanel();
     renderCheckout();
     $('#checkout-dialog').showModal();
     $('#checkout-dialog').scrollTop = 0;
@@ -404,7 +470,7 @@
   });
   $('#checkout-close').addEventListener('click', () => $('#checkout-dialog').close());
   $('#checkout-dialog').addEventListener('close', () => {
-    state.paymentCodeVisible = false;
+    resetOrderPanel();
     renderCheckout();
     checkoutOrigin?.focus({ preventScroll: true });
   });
@@ -413,12 +479,8 @@
     $('#market').scrollIntoView();
   });
   $('#dialog-add-bag').addEventListener('click', () => addBagItem(state.currentProduct.id));
-  $('#show-payment-code').addEventListener('click', () => {
-    if (!bagSummary().priced || !paymentDetails().ready) return;
-    state.paymentCodeVisible = true;
-    renderCheckout();
-    $('#payment-code-panel').scrollIntoView({ block: 'nearest' });
-  });
+  $('#show-payment-code').addEventListener('click', () => submitOrder());
+  $('#new-order').addEventListener('click', () => submitOrder(true));
   $('#payment-code-image').addEventListener('load', () => {
     $('#payment-code-image').hidden = false;
     $('#payment-code-error').hidden = true;

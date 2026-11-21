@@ -2,7 +2,7 @@
  * prices are integer CNY cents; null means not announced.
  * qrImage must be a real, organizer-provided local asset path. No secrets belong here.
  * QR payments require in-person verification; no automatic payment confirmation. */
-window.MARKET_CONFIG = {
+globalThis.MARKET_CONFIG = {
   "school": {
     "zh": "海嘉",
     "en": "BIBA"
@@ -33,7 +33,7 @@ window.MARKET_CONFIG = {
   }
 };
 
-window.MARKET_CATEGORIES = [
+globalThis.MARKET_CATEGORIES = [
   {
     "id": "all",
     "icon": "grid",
@@ -67,7 +67,7 @@ window.MARKET_CATEGORIES = [
 ];
 
 /* Display names describe the supplied photos. */
-window.MARKET_PRODUCTS = [
+globalThis.MARKET_PRODUCTS = [
   {
     "id": "scarlet-star",
     "category": "lace",
@@ -616,7 +616,7 @@ window.MARKET_PRODUCTS = [
   }
 ];
 
-window.MARKET_TRANSLATIONS = {
+globalThis.MARKET_TRANSLATIONS = {
   "zh": {
     "skip": "跳到好物集市",
     "announcement": "2026 海嘉 PTA 圣诞义卖 · 所有义卖收入全部捐出",
@@ -726,7 +726,7 @@ window.MARKET_TRANSLATIONS = {
     "bagEmptyBody": "选一份礼物，让圣诞的温暖传递得更远。",
     "bagItemsLabel": "已选好物",
     "selectedGifts": "已选好物",
-    "bagNote": "义卖袋保存在当前浏览器中；加入好物不代表已经下单或预留库存。",
+    "bagNote": "确认下单后，工作人员可按订单号查看商品明细。请在摊位确认库存。",
     "totalLabel": "义卖合计",
     "paymentTitle": "扫码支付",
     "paymentMethods": "支付方式",
@@ -734,13 +734,20 @@ window.MARKET_TRANSLATIONS = {
     "alipay": "支付宝",
     "paymentPending": "付款暂未开放",
     "paymentPendingBody": "商品价格与收款码公布后，即可在这里扫码付款。",
-    "showPaymentCode": "查看收款码",
+    "showPaymentCode": "确认下单并查看收款码",
+    "orderSubmitting": "正在保存订单…",
+    "orderNumberLabel": "义卖订单号",
+    "orderPending": "待核验 · 请向工作人员出示订单号和付款凭证。",
+    "orderPaid": "工作人员已核验付款。",
+    "newOrder": "再买一单",
+    "orderFailed": "订单暂时无法保存。请重试后再扫码付款。",
+    "orderChanged": "商品或价格已更新。请刷新页面，核对义卖袋后再下单。",
     "payeeLabel": "收款方",
     "payExactly": "应付金额",
     "paymentCodeAlt": "义卖收款二维码",
     "savePaymentCode": "保存收款码",
     "scanInstructions": "用对应的支付应用扫码，或保存图片后从相册识别。请核对收款方，并按上方应付金额足额付款。",
-    "manualCheck": "领取前请出示付款凭证。摊位工作人员核对实际到账金额，确认足额后交付商品。",
+    "manualCheck": "摊位工作人员核对订单和实际到账金额，确认足额后交付商品。",
     "paymentFootnote": "所有义卖收入都将捐出。谢谢你，让善意发生。",
     "paymentCodeError": "收款码暂时无法加载，请联系现场工作人员。",
     "unpricedStatus": "所选好物尚有价格待公布，暂时无法计算合计或付款。",
@@ -860,7 +867,7 @@ window.MARKET_TRANSLATIONS = {
     "bagEmptyBody": "Choose a gift and help the warmth of Christmas reach further.",
     "bagItemsLabel": "Selected gifts",
     "selectedGifts": "Your selected gifts",
-    "bagNote": "Your bag is saved in this browser. Adding a gift does not place an order or reserve stock.",
+    "bagNote": "Staff can look up your selected gifts after you place the order. Please check availability at the stall.",
     "totalLabel": "Total",
     "paymentTitle": "Scan to pay",
     "paymentMethods": "Payment methods",
@@ -868,13 +875,20 @@ window.MARKET_TRANSLATIONS = {
     "alipay": "Alipay",
     "paymentPending": "Payments are not open yet",
     "paymentPendingBody": "Scan-to-pay will be available once prices and payment codes are published.",
-    "showPaymentCode": "View payment QR code",
+    "showPaymentCode": "Place order and view payment code",
+    "orderSubmitting": "Saving your order…",
+    "orderNumberLabel": "Charity order number",
+    "orderPending": "Awaiting verification · Show staff your order number and payment receipt.",
+    "orderPaid": "Staff have verified your payment.",
+    "newOrder": "Place another order",
+    "orderFailed": "Your order could not be saved. Please try again before paying.",
+    "orderChanged": "The catalog or prices have changed. Refresh the page and review your bag before ordering.",
     "payeeLabel": "Payee",
     "payExactly": "Amount due",
     "paymentCodeAlt": "Charity sale payment QR code",
     "savePaymentCode": "Save payment code",
     "scanInstructions": "Scan in the matching app, or save the code and scan it from your photos. Check the payee and pay the full amount shown above.",
-    "manualCheck": "Show your receipt at the stall. Staff will verify that the full amount was received before handing over your gifts.",
+    "manualCheck": "Staff will check the order and verify that the full amount was received before handing over your gifts.",
     "paymentFootnote": "All sales revenue will be donated. Thank you for making a difference.",
     "paymentCodeError": "The payment code could not be loaded. Please contact the event team.",
     "unpricedStatus": "Some selected gifts are awaiting prices. The total and payment are not available yet.",
