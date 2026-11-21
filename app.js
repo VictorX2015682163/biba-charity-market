@@ -39,7 +39,12 @@
   let lastFocused;
   let checkoutOrigin;
   const hasPrice = p => Number.isSafeInteger(p.priceCents) && p.priceCents > 0;
-  const money = cents => new Intl.NumberFormat(state.lang === 'zh' ? 'zh-CN' : 'en-US', { style: 'currency', currency: 'CNY', currencyDisplay: 'narrowSymbol' }).format(cents / 100);
+  const currencyOptions = { style: 'currency', currency: 'CNY', currencyDisplay: 'narrowSymbol' };
+  const currencyFormatters = {
+    zh: new Intl.NumberFormat('zh-CN', currencyOptions),
+    en: new Intl.NumberFormat('en-US', currencyOptions),
+  };
+  const money = cents => currencyFormatters[state.lang].format(cents / 100);
   const priceText = p => hasPrice(p) ? money(p.priceCents) : t('pricePending');
 
   function showToast(message) {
@@ -68,12 +73,18 @@
     });
   }
 
-  function renderProducts() {
+  function renderWishlistCount() {
+    $('#wishlist-count').textContent = state.saved.size;
+    $('#wishlist-toggle').setAttribute('aria-pressed', String(state.wishlistOnly));
+    $('#wishlist-toggle').setAttribute('aria-label', `${t('wishlist')} (${state.saved.size})`);
+  }
+
+  function renderProducts(appendFrom = 0) {
     const filtered = filteredProducts();
     const displayed = filtered.slice(0, state.visible);
-    $('#product-grid').innerHTML = displayed.map((p, index) => {
+    const cards = displayed.slice(appendFrom).map(p => {
       const isSaved = state.saved.has(p.id);
-      return `<article class="product-card" style="animation-delay:${Math.min(index, 7) * 25}ms">
+      return `<article class="product-card">
         <div class="product-image-wrap" style="--image-position:${p.position}">
           <button type="button" class="product-open" data-product="${p.id}" aria-label="${t('viewDetails')}: ${text(p.name)}"><img src="assets/images/${p.images[0]}-thumb.webp" alt="${text(p.name)}" loading="lazy" decoding="async" width="640" height="800"><span class="image-open-label">${t('viewDetails')} ↗</span></button>
           ${p.tag ? `<span class="product-tag">${text(p.tag)}</span>` : ''}
@@ -83,13 +94,14 @@
         <div class="product-purchase"><span class="product-price ${hasPrice(p) ? 'priced' : ''}">${priceText(p)}</span><button type="button" class="card-add-bag" data-add-bag="${p.id}" aria-label="${t('addBag')}: ${text(p.name)}">${icon('basket')}<span>+</span></button></div>
       </article>`;
     }).join('');
+    const grid = $('#product-grid');
+    if (appendFrom) grid.insertAdjacentHTML('beforeend', cards);
+    else grid.innerHTML = cards;
     const countText = state.lang === 'zh'
       ? `${state.wishlistOnly ? '我的心愿单 · ' : ''}共 ${filtered.length} 件好物${displayed.length < filtered.length ? ` · 已展示 ${displayed.length} 件` : ''}`
       : `${state.wishlistOnly ? 'My wishlist · ' : ''}${filtered.length} ${filtered.length === 1 ? 'gift' : 'gifts'}${displayed.length < filtered.length ? ` · Showing ${displayed.length}` : ''}`;
     $('#results-count').textContent = countText;
-    $('#wishlist-count').textContent = state.saved.size;
-    $('#wishlist-toggle').setAttribute('aria-pressed', String(state.wishlistOnly));
-    $('#wishlist-toggle').setAttribute('aria-label', `${t('wishlist')} (${state.saved.size})`);
+    renderWishlistCount();
     $('#empty-state').hidden = filtered.length > 0;
     const emptyWishlist = state.wishlistOnly && state.saved.size === 0;
     $('#empty-title').textContent = t(emptyWishlist ? 'emptyWishTitle' : 'emptySearchTitle');
@@ -111,11 +123,19 @@
   }
 
   function toggleFavorite(id, origin) {
-    if (!products.some(p => p.id === id)) return;
+    const product = products.find(p => p.id === id);
+    if (!product) return;
     const wasSaved = state.saved.has(id);
     wasSaved ? state.saved.delete(id) : state.saved.add(id);
     const persisted = storage.set('haijia-wishlist-v1', JSON.stringify([...state.saved]));
-    renderProducts();
+    if (state.wishlistOnly) {
+      renderProducts();
+    } else {
+      const button = $(`[data-favorite="${id}"]`);
+      button?.setAttribute('aria-pressed', String(!wasSaved));
+      button?.setAttribute('aria-label', `${t(wasSaved ? 'addWish' : 'removeWish')}: ${text(product.name)}`);
+      renderWishlistCount();
+    }
     if (state.currentProduct) renderSaveButton();
     if (origin?.matches('[data-favorite]')) {
       const nextFocus = $(`[data-favorite="${id}"]`) || $('#wishlist-toggle');
@@ -252,7 +272,7 @@
   $('#load-more').addEventListener('click', () => {
     const previousCount = state.visible;
     state.visible = products.length;
-    renderProducts();
+    renderProducts(previousCount);
     $$('.product-open')[previousCount]?.focus({ preventScroll: true });
   });
   $('#dialog-close').addEventListener('click', () => $('#product-dialog').close());
@@ -410,7 +430,11 @@
     $('#payment-code-download').hidden = true;
     $('#payment-code-error').hidden = false;
   });
-  $('#poster-open').addEventListener('click', () => $('#poster-dialog').showModal());
+  $('#poster-open').addEventListener('click', () => {
+    const poster = $('#poster-dialog img');
+    if (!poster.hasAttribute('src')) poster.src = poster.dataset.fullSrc;
+    $('#poster-dialog').showModal();
+  });
   $('#poster-close').addEventListener('click', () => $('#poster-dialog').close());
   for (const id of ['poster-dialog', 'checkout-dialog']) {
     $(`#${id}`).addEventListener('click', event => {
@@ -426,5 +450,17 @@
     }
   }, { rootMargin: '-15% 0px -55% 0px', threshold: 0 });
   ['market', 'charity', 'visit'].forEach(id => sectionObserver.observe($(`#${id}`)));
+
+  const heroArt = $('.hero-art');
+  let artOnScreen = false;
+  function updateHeroMotion() {
+    heroArt.classList.toggle('motion-active', artOnScreen && !document.hidden);
+  }
+  const artObserver = new IntersectionObserver(([entry]) => {
+    artOnScreen = entry.isIntersecting;
+    updateHeroMotion();
+  });
+  artObserver.observe(heroArt);
+  document.addEventListener('visibilitychange', updateHeroMotion);
   setLanguage(state.lang);
 })();

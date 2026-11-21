@@ -8,27 +8,27 @@ window.MARKET_CONFIG = {
     "en": "BIBA"
   },
   "date": {
-    "zh": "",
-    "en": ""
+    "zh": "2026 年 12 月 1 日至 7 日",
+    "en": "December 1–7, 2026"
   },
   "location": {
-    "zh": "",
-    "en": ""
+    "zh": "小高教学楼二层",
+    "en": "2nd floor, Upper Elementary Teaching Building"
   },
   "payments": {
     "wechat": {
       "payee": {
-        "zh": "",
-        "en": ""
+        "zh": "CC(*纯)",
+        "en": "CC(*纯)"
       },
-      "qrImage": ""
+      "qrImage": "assets/images/wechat-payment.png"
     },
     "alipay": {
       "payee": {
-        "zh": "",
-        "en": ""
+        "zh": "CC(*纯)",
+        "en": "CC(*纯)"
       },
-      "qrImage": ""
+      "qrImage": "assets/images/alipay-payment.png"
     }
   }
 };
@@ -43,8 +43,8 @@ window.MARKET_CATEGORIES = [
   {
     "id": "lace",
     "icon": "spark",
-    "zh": "蕾丝饰品",
-    "en": "Lace jewelry"
+    "zh": "棱边饰品",
+    "en": "Tatted Jewelry"
   },
   {
     "id": "beads",
@@ -69,6 +69,28 @@ window.MARKET_CATEGORIES = [
 /* Display names describe the supplied photos. */
 window.MARKET_PRODUCTS = [
   {
+    "id": "scarlet-star",
+    "category": "lace",
+    "images": [
+      "203"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "红白圣诞星",
+      "en": "Scarlet Christmas Star"
+    },
+    "subtitle": {
+      "zh": "Scarlet Christmas Star",
+      "en": "Red beads and snowy tips"
+    },
+    "description": {
+      "zh": "五瓣红色珠纹围出一颗星，白色棱珠落在花心和五个尖角。",
+      "en": "Rows of red beads form a five-pointed star, with white beads around the center and at each tip."
+    },
+    "keywords": "red white star scarlet christmas festive holiday 五角星 星星 圣诞 红 白 串珠 饰物",
+    "priceCents": 10000
+  },
+  {
     "id": "christmas-basket",
     "category": "woven",
     "images": [
@@ -92,7 +114,29 @@ window.MARKET_PRODUCTS = [
       "en": "Bright red meets a band of forest-green weaving. Two classic Christmas colors come together in a cheerful basket, ready for a little festive inspiration."
     },
     "keywords": "basket red green christmas 圣诞 红 绿 篮子 编织 收纳",
-    "priceCents": null
+    "priceCents": 10000
+  },
+  {
+    "id": "turquoise-rosette",
+    "category": "lace",
+    "images": [
+      "202"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "青碧花窗饰",
+      "en": "Turquoise Rosette"
+    },
+    "subtitle": {
+      "zh": "Turquoise Rosette",
+      "en": "Aqua beads and silver-colored loops"
+    },
+    "description": {
+      "zh": "银色线圈勾出花窗的轮廓，青绿色小珠围着中央的水滴形亮饰。",
+      "en": "Aqua beads tip each silver-colored loop around a faceted, teardrop-shaped center."
+    },
+    "keywords": "aqua turquoise teal flower rosette teardrop 蓝 绿 青碧 花窗 水滴 花纹 小饰",
+    "priceCents": 10000
   },
   {
     "id": "rose-lace",
@@ -103,8 +147,8 @@ window.MARKET_PRODUCTS = [
     ],
     "position": "50% 60%",
     "name": {
-      "zh": "莓果花语蕾丝套组",
-      "en": "Berry Blossom Lace Set"
+      "zh": "莓果花语棱边套组",
+      "en": "Berry Blossom Tatted Set"
     },
     "subtitle": {
       "zh": "A little berry-colored wonder",
@@ -118,8 +162,30 @@ window.MARKET_PRODUCTS = [
       "zh": "粉红色线条连成细密的花朵，红色小珠点缀其间。项链与耳饰呼应着同一种花纹，像把冬日里的一簇莓果悄悄收藏。",
       "en": "Delicate pink loops form a chain of flowers, dotted with tiny red beads. The necklace and earrings share a floral pattern, like a little cluster of winter berries."
     },
-    "keywords": "pink red necklace earrings lace set 粉 红 项链 耳环 耳饰 蕾丝 套组 莓果",
-    "priceCents": null
+    "keywords": "pink red necklace earrings tatting tatted set 粉 红 项链 耳环 耳饰 棱边 套组 莓果",
+    "priceCents": 10000
+  },
+  {
+    "id": "snow-crystal",
+    "category": "lace",
+    "images": [
+      "207"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "六角雪花饰",
+      "en": "Snow Crystal Motif"
+    },
+    "subtitle": {
+      "zh": "Snow Crystal Motif",
+      "en": "Six white branches with beaded tips"
+    },
+    "description": {
+      "zh": "六瓣花心伸出雪花的枝杈，每一端都点着透亮的小珠。",
+      "en": "Six branches extend from a flower-shaped center, each finished with little translucent beads."
+    },
+    "keywords": "snowflake crystal white star snow christmas 六角 白 雪 雪花 冬 圣诞 小饰",
+    "priceCents": 10000
   },
   {
     "id": "rainbow-beads",
@@ -145,7 +211,29 @@ window.MARKET_PRODUCTS = [
       "en": "Orange, green, blue and purple beads meet golden accents. A bright mix of colors to bring a little everyday joy to your wrist."
     },
     "keywords": "rainbow colorful bracelet beads 彩色 多彩 手链 串珠 手串",
-    "priceCents": null
+    "priceCents": 10000
+  },
+  {
+    "id": "ivory-medallion",
+    "category": "lace",
+    "images": [
+      "195-ivory"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "暖金花章项链",
+      "en": "Ivory Medallion Necklace"
+    },
+    "subtitle": {
+      "zh": "Ivory Medallion Necklace",
+      "en": "Ivory, gold and scalloped edges"
+    },
+    "description": {
+      "zh": "浅色圆章沿着颈线展开，边缘有一圈深色小珠，暖金色的椭圆亮饰点在花心。",
+      "en": "Dark beads trace ivory medallions along the neckline, with warm golden highlights in the flowers."
+    },
+    "keywords": "ivory cream gold medallion necklace 框 金 暖金 米白 圆章 项链",
+    "priceCents": 10000
   },
   {
     "id": "flower-accessories",
@@ -171,7 +259,161 @@ window.MARKET_PRODUCTS = [
       "en": "Layered petals, delicate leaves and little pearly accents. Each flower in the collection has its own palette, like a tiny garden you can take with you."
     },
     "keywords": "flowers floral accessory hair brooch 花 花饰 发饰 胸针 叶片",
-    "priceCents": null
+    "priceCents": 10000
+  },
+  {
+    "id": "pearl-sprig",
+    "category": "lace",
+    "images": [
+      "205"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "雪枝珠光项链",
+      "en": "Snowdrop Necklace"
+    },
+    "subtitle": {
+      "zh": "Snowdrop Necklace",
+      "en": "White openwork and pearl-like beads"
+    },
+    "description": {
+      "zh": "白线绕成一串相连的枝叶，圆润的珠饰沿着领口排开。",
+      "en": "White thread forms a row of leafy sprigs, with round, pearl-like beads spaced along the neckline."
+    },
+    "keywords": "snowdrop white necklace pearl bridal 冬 雪 白色 珠光 项链 颈饰",
+    "priceCents": 10000
+  },
+  {
+    "id": "garnet-bloom",
+    "category": "lace",
+    "images": [
+      "194"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "绯红花冠项链",
+      "en": "Crimson Garland Necklace"
+    },
+    "subtitle": {
+      "zh": "Crimson Garland Necklace",
+      "en": "Deep red accents and bronze-colored loops"
+    },
+    "description": {
+      "zh": "古铜色与深色小珠围起一圈花纹，绯红的亮饰点在花纹中央。",
+      "en": "Bronze-colored loops and dark beads form a garland of flowers with deep red centers."
+    },
+    "keywords": "crimson garnet red bronze necklace 花冠 酒红 深红 古铜 复古 项链",
+    "priceCents": 10000
+  },
+  {
+    "id": "ink-medallion",
+    "category": "lace",
+    "images": [
+      "195-ink"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "墨夜花章项链",
+      "en": "Midnight Medallion Necklace"
+    },
+    "subtitle": {
+      "zh": "Midnight Medallion Necklace",
+      "en": "Black beads and an openwork border"
+    },
+    "description": {
+      "zh": "深墨色的小珠密密围成花章，下缘以镂空的环形花纹收边。",
+      "en": "Closely spaced black beads form dark medallions above an openwork border."
+    },
+    "keywords": "black ink dark midnight medallion necklace 黑 墨色 花章 项链",
+    "priceCents": 10000
+  },
+  {
+    "id": "frost-medallion",
+    "category": "lace",
+    "images": [
+      "195-ice"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "冰蓝花章项链",
+      "en": "Ice Blue Medallion Necklace"
+    },
+    "subtitle": {
+      "zh": "Ice Blue Medallion Necklace",
+      "en": "Pale blue beads and lilac accents"
+    },
+    "description": {
+      "zh": "冰蓝色的细珠连成一排花章，圆心里的淡紫色点缀映出柔光。",
+      "en": "Pale blue beads circle softly lilac centers in a row of scalloped medallions."
+    },
+    "keywords": "ice blue lilac pale silver medallion necklace 冰蓝 银蓝 淡紫 花章 项链",
+    "priceCents": 10000
+  },
+  {
+    "id": "dark-scallop",
+    "category": "lace",
+    "images": [
+      "196"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "墨金环纹颈饰",
+      "en": "Black and Gold Collar"
+    },
+    "subtitle": {
+      "zh": "Black and Gold Collar",
+      "en": "Layered black loops with a gold-colored band"
+    },
+    "description": {
+      "zh": "内圈的金色细节与外圈的深色环纹叠在一起，沿着领口围成扇形花边。",
+      "en": "A narrow band of gold-colored accents sits inside rows of dark loops that scallop the neckline."
+    },
+    "keywords": "dark black gold collar necklace 黑 金 墨色 双层 环纹 颈饰 项链",
+    "priceCents": 10000
+  },
+  {
+    "id": "silver-wreath",
+    "category": "lace",
+    "images": [
+      "204"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "银白花环饰",
+      "en": "Silver Wreath Motif"
+    },
+    "subtitle": {
+      "zh": "Silver Wreath Motif",
+      "en": "Silver-colored thread and a black scalloped border"
+    },
+    "description": {
+      "zh": "银白色线结首尾相连绕成花环，纤细的黑色花边勾出内外两道轮廓。",
+      "en": "Silver-colored knots form an open wreath, edged inside and out with fine black scallops."
+    },
+    "keywords": "silver white black wreath circle hoop motif 银 白 黑 环形 圆环 花环 饰物",
+    "priceCents": 10000
+  },
+  {
+    "id": "copper-vine",
+    "category": "lace",
+    "images": [
+      "208"
+    ],
+    "position": "50% 50%",
+    "name": {
+      "zh": "棕金藤纹链饰",
+      "en": "Bronze Vine Chain"
+    },
+    "subtitle": {
+      "zh": "Bronze Vine Chain",
+      "en": "Scrolls of brown thread and gold-colored beads"
+    },
+    "description": {
+      "zh": "棕色线圈沿着链身交错相扣，点点金色小珠缀在藤纹两边。",
+      "en": "Interlocking brown loops run along a slender chain, edged with clusters of gold-colored beads."
+    },
+    "keywords": "bronze gold vine chain clasp brown 金 棕 古铜 藤纹 链饰",
+    "priceCents": 10000
   },
   {
     "id": "silver-lace",
@@ -181,8 +423,8 @@ window.MARKET_PRODUCTS = [
     ],
     "position": "50% 58%",
     "name": {
-      "zh": "冬日银光蕾丝套组",
-      "en": "Winter Shimmer Lace Set"
+      "zh": "冬日银光棱边套组",
+      "en": "Winter Shimmer Tatted Set"
     },
     "subtitle": {
       "zh": "A quiet winter shimmer",
@@ -192,8 +434,8 @@ window.MARKET_PRODUCTS = [
       "zh": "浅银色的花形线条与细小珠饰交织，项链和耳饰呈现轻盈的层次。柔和的颜色，像冬日落在窗边的一束光。",
       "en": "Pale silver-colored floral loops intertwine with tiny beads in a matching necklace and earring set. Soft tones echo a quiet beam of winter light."
     },
-    "keywords": "silver white necklace earrings set lace 银 白 项链 耳环 蕾丝",
-    "priceCents": null
+    "keywords": "silver white necklace earrings set tatting tatted 银 白 项链 耳环 棱边",
+    "priceCents": 10000
   },
   {
     "id": "pastel-beads",
@@ -215,7 +457,7 @@ window.MARKET_PRODUCTS = [
       "en": "Blush, clear and mint-green beads alternate in a soft, light-catching palette. A gentle mix for someone who loves fresh colors."
     },
     "keywords": "mint green pink pastel bracelet 绿 粉 透明 手链 串珠",
-    "priceCents": null
+    "priceCents": 10000
   },
   {
     "id": "gold-leaf",
@@ -237,7 +479,7 @@ window.MARKET_PRODUCTS = [
       "en": "An openwork leaf shape holds warm golden-colored beads. Delicate details lend a little seasonal poetry to this small decorative piece."
     },
     "keywords": "gold leaf floral accessory brooch 金色 叶子 叶饰 胸针 小饰",
-    "priceCents": null
+    "priceCents": 10000
   },
   {
     "id": "woodland-beads",
@@ -259,7 +501,7 @@ window.MARKET_PRODUCTS = [
       "en": "Brown-toned round beads meet fresh green and a touch of warm orange. A calm palette with bright little accents, inspired by woodland colors."
     },
     "keywords": "brown green orange bracelet wood woodland 棕色 绿 木色 森林 手链 手串",
-    "priceCents": null
+    "priceCents": 10000
   },
   {
     "id": "golden-lace",
@@ -269,19 +511,19 @@ window.MARKET_PRODUCTS = [
     ],
     "position": "50% 58%",
     "name": {
-      "zh": "鎏光花影蕾丝套组",
-      "en": "Golden Hour Lace Set"
+      "zh": "鎏光花影棱边套组",
+      "en": "Golden Hour Tatted Set"
     },
     "subtitle": {
       "zh": "A touch of golden-hour magic",
       "en": "Necklace & matching earrings"
     },
     "description": {
-      "zh": "浅色蕾丝边缘缀着金色与深色珠饰，中央的暖色吊坠成为视觉焦点。项链与耳饰以层层花形纹样相互呼应。",
-      "en": "Golden and darker beads trace the edges of pale lace, framing a warm-toned centerpiece. Layered floral patterns connect the necklace and matching earrings."
+      "zh": "浅色棱边花纹的边缘缀着金色与深色珠饰，中央的暖色吊坠成为视觉焦点。项链与耳饰以层层花形纹样相互呼应。",
+      "en": "Golden and darker beads trace the pale tatted loops, framing a warm-toned centerpiece. Layered floral patterns connect the necklace and matching earrings."
     },
-    "keywords": "gold lace necklace earrings pendant 金色 项链 吊坠 耳环 蕾丝",
-    "priceCents": null
+    "keywords": "gold tatting tatted necklace earrings pendant 金色 项链 吊坠 耳环 棱边",
+    "priceCents": 10000
   },
   {
     "id": "blush-lace",
@@ -303,8 +545,8 @@ window.MARKET_PRODUCTS = [
       "zh": "浅粉色的细致编结串起小小光点，花形耳饰、戒指与水滴形吊坠相互呼应。柔和又细腻的一组粉色心意。",
       "en": "Fine blush-colored loops connect tiny highlights. Floral earrings, a ring and a teardrop pendant come together in a soft, delicately detailed set."
     },
-    "keywords": "pink ring necklace earrings pendant lace 粉 项链 耳环 戒指 套组 蕾丝",
-    "priceCents": null
+    "keywords": "pink ring necklace earrings pendant tatting tatted 粉 项链 耳环 戒指 套组 棱边",
+    "priceCents": 10000
   },
   {
     "id": "snow-lace",
@@ -315,18 +557,18 @@ window.MARKET_PRODUCTS = [
     "position": "50% 48%",
     "name": {
       "zh": "初雪花边颈饰",
-      "en": "First Snow Lace Collar"
+      "en": "First Snow Tatted Collar"
     },
     "subtitle": {
       "zh": "Like the first snow of winter",
-      "en": "An intricate white lace collar"
+      "en": "An intricate white tatted collar"
     },
     "description": {
       "zh": "白色花纹层层展开，圆润珠饰垂坠其间。立体的颈饰轮廓与细密的镂空纹样，让人想起冬日初雪。",
       "en": "White floral patterns unfold in layers with rounded bead accents. An intricate openwork collar with a silhouette reminiscent of the first winter snow."
     },
-    "keywords": "white lace collar choker necklace pearl 白色 雪 花边 颈饰 项圈 项链 珍珠",
-    "priceCents": null
+    "keywords": "white tatting tatted collar choker necklace pearl 白色 雪 花边 颈饰 项圈 项链 珍珠",
+    "priceCents": 10000
   },
   {
     "id": "warm-beads",
@@ -348,7 +590,7 @@ window.MARKET_PRODUCTS = [
       "en": "Warm red, soft pink and clear tones come together on the wrist. The photograph shows several bracelets styled together, offering inspiration for your own color pairing."
     },
     "keywords": "red pink bracelet layered beads 红 粉 手链 叠戴 串珠 手串",
-    "priceCents": null
+    "priceCents": 10000
   },
   {
     "id": "peach-beads",
@@ -370,7 +612,7 @@ window.MARKET_PRODUCTS = [
       "en": "Soft peach-colored round beads catch a warm glow in the sunlight. Their rounded shapes give these little beaded pieces a gentle sweetness."
     },
     "keywords": "peach pink bead bracelet 蜜桃 粉 珠串 手链 串珠",
-    "priceCents": null
+    "priceCents": 10000
   }
 ];
 
@@ -396,7 +638,7 @@ window.MARKET_TRANSLATIONS = {
     "polaroidLeft": "小小手作，满满心意",
     "polaroidRight": "把快乐串起来",
     "heroImage": "红绿相间的手工编织篮",
-    "roseImage": "粉红蕾丝项链与耳饰",
+    "roseImage": "粉红棱边项链与耳饰",
     "beadImage": "彩色串珠手链",
     "value1": "手作的温度",
     "value1Sub": "Made with care",
@@ -406,7 +648,7 @@ window.MARKET_TRANSLATIONS = {
     "value3Sub": "BIBA PTA · 2026",
     "marketEyebrow": "GIFTS THAT GIVE BACK",
     "marketTitle": "来挑一份，心动好物<span class=\"heading-star\" aria-hidden=\"true\">✳</span>",
-    "marketIntro": "挑一份心仪的圣诞礼物，把温暖传递给更多人。",
+    "marketIntro": "每款 100 元，义卖收入将全部捐出。",
     "collectionNote": "每一份心意 · 都是一份善意",
     "categories": "好物分类",
     "searchPlaceholder": "寻找心仪好物…",
@@ -419,7 +661,7 @@ window.MARKET_TRANSLATIONS = {
     "collectionEnd": "愿你找到那份刚刚好的心意。",
     "storyEyebrow": "SMALL THINGS, BIG HEART",
     "storyTitle": "礼物的美好，<br>从一双手开始。",
-    "storyBody": "一颗珠子，一缕丝线，一点奇思妙想。<br>从细细编织的蕾丝，到色彩斑斓的串珠，<br>那些被认真对待的小细节，让礼物有了温度。",
+    "storyBody": "一颗珠子，一缕丝线，一点奇思妙想。<br>从层层编结的棱边花纹，到色彩斑斓的串珠，<br>那些被认真对待的小细节，让礼物有了温度。",
     "storyClosing": "这个圣诞，让手作的温暖，变成支持他人的力量。",
     "storyLink": "发现手作好物",
     "storyImage": "双手正在串起暖色珠子",
@@ -427,9 +669,8 @@ window.MARKET_TRANSLATIONS = {
     "visitTitle": "圣诞义卖，见！",
     "visitIntro": "带上好奇心，来收集冬日的小确幸。",
     "dateLabel": "活动时间",
-    "dateNote": "敬请留意学校后续通知",
+    "dateNote": "每天 8:00–17:00",
     "locationLabel": "集市地点",
-    "locationNote": "具体场地将随活动通知公布",
     "tipLabel": "逛集市小贴士",
     "tipTitle": "先收藏，再来相遇",
     "tipNote": "心愿单会保存在当前浏览器中",
@@ -439,7 +680,7 @@ window.MARKET_TRANSLATIONS = {
     "closeDetail": "关闭详情",
     "previousImage": "上一张",
     "nextImage": "下一张",
-    "detailNote": "本次义卖收入将全部捐出。可以先加入义卖袋，价格与收款方式公布后再结算。",
+    "detailNote": "义卖收入将全部捐出。请在摊位确认款式和数量，再打开义卖袋扫码付款。",
     "detailCaption": "展示名称根据照片拟定，具体信息请现场确认。",
     "pending": "待公布",
     "addWish": "加入心愿单",
@@ -498,7 +739,7 @@ window.MARKET_TRANSLATIONS = {
     "payExactly": "请支付",
     "paymentCodeAlt": "义卖收款二维码",
     "savePaymentCode": "保存收款码",
-    "scanInstructions": "请核对收款方与金额，用对应支付应用扫码，或保存图片后从相册识别。支付后请向现场工作人员出示凭证，核验后领取好物。",
+    "scanInstructions": "用对应支付应用扫码，或保存收款码后从相册识别。核对收款方，输入上方义卖合计。付款后请向摊位工作人员出示支付凭证，领取好物。",
     "manualCheck": "付款状态以支付应用及现场核验为准，本页面不会自动确认到账。",
     "paymentFootnote": "所有义卖收入都将捐出。谢谢你，让善意发生。",
     "paymentCodeError": "收款码暂时无法加载，请联系现场工作人员。",
@@ -531,7 +772,7 @@ window.MARKET_TRANSLATIONS = {
     "polaroidLeft": "Little things, lots of love",
     "polaroidRight": "String a little joy",
     "heroImage": "A red and green handwoven Christmas basket",
-    "roseImage": "A pink lace necklace and matching earrings",
+    "roseImage": "A pink openwork necklace and matching earrings",
     "beadImage": "A colorful beaded bracelet",
     "value1": "Made with care",
     "value1Sub": "The handmade touch",
@@ -541,7 +782,7 @@ window.MARKET_TRANSLATIONS = {
     "value3Sub": "Together in 2026",
     "marketEyebrow": "GIFTS THAT GIVE BACK",
     "marketTitle": "Find your little festive joy<span class=\"heading-star\" aria-hidden=\"true\">✳</span>",
-    "marketIntro": "Find a thoughtful Christmas gift, and help kindness reach a little further.",
+    "marketIntro": "Every gift is ¥100. All sales revenue will be donated.",
     "collectionNote": "Little gifts · Meaningful kindness",
     "categories": "Gift categories",
     "searchPlaceholder": "Find a little something…",
@@ -554,7 +795,7 @@ window.MARKET_TRANSLATIONS = {
     "collectionEnd": "Here’s to finding that just-right little gift.",
     "storyEyebrow": "SMALL THINGS, BIG HEART",
     "storyTitle": "Every lovely gift<br>starts with a pair of hands.",
-    "storyBody": "A bead, a thread, a little imagination.<br>From intricate lace to colorful strings of beads,<br>it’s the thoughtful details that make a gift feel warm.",
+    "storyBody": "A bead, a thread, a little imagination.<br>From loops of knotted thread to colorful strings of beads,<br>it’s the thoughtful details that make a gift feel warm.",
     "storyClosing": "This Christmas, let the warmth of handmade gifts help others.",
     "storyLink": "Explore handmade gifts",
     "storyImage": "Hands carefully stringing warm-colored beads",
@@ -562,9 +803,8 @@ window.MARKET_TRANSLATIONS = {
     "visitTitle": "See you at the charity market!",
     "visitIntro": "Bring your curiosity. Find your little moments of winter joy.",
     "dateLabel": "WHEN",
-    "dateNote": "Watch for the school’s next announcement",
+    "dateNote": "Daily, 8:00 AM–5:00 PM",
     "locationLabel": "WHERE",
-    "locationNote": "Venue details will be announced by the school",
     "tipLabel": "A LITTLE TIP",
     "tipTitle": "Save it now. Find it there.",
     "tipNote": "Your wishlist is saved in this browser",
@@ -574,7 +814,7 @@ window.MARKET_TRANSLATIONS = {
     "closeDetail": "Close details",
     "previousImage": "Previous photo",
     "nextImage": "Next photo",
-    "detailNote": "All sales revenue will be donated. Add your favorites to your charity bag, then check out once prices and payment details are announced.",
+    "detailNote": "All sales revenue will be donated. Confirm your selection at the stall, then open your charity bag to pay by QR code.",
     "detailCaption": "Display names are inspired by the photos. Please confirm details at the market.",
     "pending": "To be announced",
     "addWish": "Add to wishlist",
@@ -633,7 +873,7 @@ window.MARKET_TRANSLATIONS = {
     "payExactly": "Please pay",
     "paymentCodeAlt": "Charity sale payment QR code",
     "savePaymentCode": "Save payment code",
-    "scanInstructions": "Check the payee and amount. Scan with the matching payment app, or save the image and scan it from your album. Show your receipt to the event team for verification before collecting your gifts.",
+    "scanInstructions": "Scan in the matching app, or save the code and scan it from your photos. Check the payee and enter the total shown above. Show your receipt at the stall to collect your gifts.",
     "manualCheck": "Payment is confirmed in your payment app and by the event team. This page does not automatically verify payment.",
     "paymentFootnote": "All sales revenue will be donated. Thank you for making a difference.",
     "paymentCodeError": "The payment code could not be loaded. Please contact the event team.",
