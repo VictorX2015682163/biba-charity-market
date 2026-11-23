@@ -88,7 +88,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Scarlet beads bloom along five delicate petals, touched with snowy white accents like a Christmas star glowing in the winter night. A little warmth for someone close to your heart."
     },
     "keywords": "red white star scarlet christmas festive holiday 五角星 星星 圣诞 红 白 串珠 饰物 红白圣诞星 Scarlet Christmas Star",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "christmas-basket",
@@ -114,7 +114,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Bright red meets a band of forest-green weaving. Two classic Christmas colors come together in a cheerful basket, ready for a little festive inspiration."
     },
     "keywords": "basket red green christmas 圣诞 红 绿 篮子 编织 收纳",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "rose-lace",
@@ -141,7 +141,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Delicate pink loops form a chain of flowers, dotted with tiny red beads. The necklace and earrings share a floral pattern, like a little cluster of winter berries."
     },
     "keywords": "pink red necklace earrings tatting tatted set 粉 红 项链 耳环 耳饰 梭编 套组 莓果",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "rainbow-beads",
@@ -167,7 +167,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Orange, green, blue and purple beads meet golden accents. A bright mix of colors to bring a little everyday joy to your wrist."
     },
     "keywords": "rainbow colorful bracelet beads 彩色 多彩 手链 串珠 手串",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "ivory-medallion",
@@ -189,7 +189,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Dark beads trace ivory medallions along the neckline, with warm golden highlights in the flowers."
     },
     "keywords": "ivory cream gold medallion necklace 框 金 暖金 米白 圆章 项链",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "flower-accessories",
@@ -215,7 +215,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Layered petals, delicate leaves and little pearly accents. Each flower in the collection has its own palette, like a tiny garden you can take with you."
     },
     "keywords": "flowers floral accessory hair brooch 花 花饰 发饰 胸针 叶片",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "garnet-bloom",
@@ -237,7 +237,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Deep crimson glows within layered flowers, framed by bronze-colored knots and tiny beads like a garden still blooming at dusk. Rich, gentle color brings warmth to the neckline."
     },
     "keywords": "crimson garnet red bronze necklace 花冠 酒红 深红 古铜 复古 项链 绯红花冠项链 Crimson Garland Necklace",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "ink-medallion",
@@ -259,7 +259,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Inky beads gather into quiet blossoms, their subtle shimmer appearing between openwork curves. Like a little night garden at the neckline, each flower holds a glint waiting to be noticed."
     },
     "keywords": "black ink dark midnight medallion necklace 黑 墨色 花章 项链 墨夜花章项链 Midnight Medallion Necklace",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "frost-medallion",
@@ -281,7 +281,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Icy blue beads surround soft lilac centers, linking blossoms like moonlight resting on frosted petals. Pale, quiet color traces the neckline with the stillness of a winter evening."
     },
     "keywords": "ice blue lilac pale silver medallion necklace 冰蓝 银蓝 淡紫 花章 项链 冰蓝花章项链 Ice Blue Medallion Necklace",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "dark-scallop",
@@ -303,7 +303,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "A warm golden curve runs through dark openwork, its looping edges unfolding like lights across the evening. The play of light and shadow lends a gentle rhythm to a winter neckline."
     },
     "keywords": "dark black gold collar necklace 黑 金 墨色 双层 环纹 颈饰 项链 墨金环纹颈饰 Black and Gold Collar",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "silver-wreath",
@@ -325,7 +325,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Silver-white knots blossom into a softly glowing wreath, outlined by fine dark scallops. It recalls a circle of frost flowers on a winter window, small enough to treasure in your palm."
     },
     "keywords": "silver white black wreath circle hoop motif 银 白 黑 环形 圆环 花环 饰物 银白花环饰 Silver Wreath Motif",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "copper-vine",
@@ -347,7 +347,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Warm brown knots wind into a slender vine, dotted with golden-colored beads like the last sunlight caught on its branches. Delicate loops carry a little afternoon warmth into an everyday gift."
     },
     "keywords": "bronze gold vine chain clasp brown 金 棕 古铜 藤纹 链饰 棕金藤纹链饰 Bronze Vine Chain",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "silver-lace",
@@ -369,7 +369,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Pale silver-colored floral loops intertwine with tiny beads in a matching necklace and earring set. Soft tones echo a quiet beam of winter light."
     },
     "keywords": "silver white necklace earrings set tatting tatted 银 白 项链 耳环 梭编",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "pastel-beads",
@@ -391,7 +391,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Blush, clear and mint-green beads alternate in a soft, light-catching palette. A gentle mix for someone who loves fresh colors."
     },
     "keywords": "mint green pink pastel bracelet 绿 粉 透明 手链 串珠",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "gold-leaf",
@@ -413,7 +413,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "An openwork leaf shape holds warm golden-colored beads. Delicate details lend a little seasonal poetry to this small decorative piece."
     },
     "keywords": "gold leaf floral accessory brooch 金色 叶子 叶饰 胸针 小饰",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "woodland-beads",
@@ -435,7 +435,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Brown-toned round beads meet fresh green and a touch of warm orange. A calm palette with bright little accents, inspired by woodland colors."
     },
     "keywords": "brown green orange bracelet wood woodland 棕色 绿 木色 森林 手链 手串",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "golden-lace",
@@ -457,7 +457,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Golden and darker beads trace the pale tatted loops, framing a warm-toned centerpiece. Layered floral patterns connect the necklace and matching earrings."
     },
     "keywords": "gold tatting tatted necklace earrings pendant 金色 项链 吊坠 耳环 梭编",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "blush-lace",
@@ -480,7 +480,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Fine blush-colored loops connect tiny highlights. Floral earrings, a ring and a teardrop pendant come together in a soft, delicately detailed set."
     },
     "keywords": "pink ring necklace earrings pendant tatting tatted 粉 项链 耳环 戒指 套组 梭编",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "snow-lace",
@@ -502,7 +502,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "White floral patterns unfold in layers with rounded bead accents. An intricate openwork collar with a silhouette reminiscent of the first winter snow."
     },
     "keywords": "white tatting tatted collar choker necklace pearl 白色 雪 花边 颈饰 项圈 项链 珍珠",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "warm-beads",
@@ -524,7 +524,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Warm red, soft pink and clear tones come together on the wrist. The photograph shows several bracelets styled together, offering inspiration for your own color pairing."
     },
     "keywords": "red pink bracelet layered beads 红 粉 手链 叠戴 串珠 手串",
-    "priceCents": 10000
+    "priceCents": null
   },
   {
     "id": "peach-beads",
@@ -546,7 +546,7 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Soft peach-colored round beads catch a warm glow in the sunlight. Their rounded shapes give these little beaded pieces a gentle sweetness."
     },
     "keywords": "peach pink bead bracelet 蜜桃 粉 珠串 手链 串珠",
-    "priceCents": 10000
+    "priceCents": null
   }
 ];
 
@@ -582,7 +582,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "value3Sub": "BIBA PTA · 2026",
     "marketEyebrow": "GIFTS THAT GIVE BACK",
     "marketTitle": "来挑一份，心动好物<span class=\"heading-star\" aria-hidden=\"true\">✳</span>",
-    "marketIntro": "每款 100 元，义卖收入将全部捐出。",
+    "marketIntro": "商品待定价，义卖收入将全部捐出。",
     "collectionNote": "每一份心意 · 都是一份善意",
     "categories": "好物分类",
     "searchPlaceholder": "寻找心仪好物…",
@@ -650,7 +650,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "bagStorageError": "已加入义卖袋，但当前浏览器无法在关闭页面后保存。",
     "bagLimit": "每款最多选择 99 件，请与现场工作人员确认供应情况。",
     "charityPrice": "义卖价格",
-    "pricePending": "价格待公布",
+    "pricePending": "待定价",
     "totalPending": "待公布",
     "checkoutEyebrow": "A LITTLE GIFT. A WORLD OF GOOD.",
     "checkoutTitle": "我的爱心义卖袋",
@@ -684,7 +684,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "manualCheck": "摊位工作人员核对订单和实际到账金额，确认足额后交付商品。",
     "paymentFootnote": "所有义卖收入都将捐出。谢谢你，让善意发生。",
     "paymentCodeError": "收款码暂时无法加载，请联系现场工作人员。",
-    "unpricedStatus": "所选好物尚有价格待公布，暂时无法计算合计或付款。",
+    "unpricedStatus": "所选好物尚有待定价，暂时无法计算合计或付款。",
     "paymentNotReady": "该支付方式的收款信息尚未公布。",
     "paymentReady": "扫码后请手动输入上方合计。摊位工作人员确认足额到账后发放商品。",
     "removeItem": "移除",
@@ -723,7 +723,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "value3Sub": "Together in 2026",
     "marketEyebrow": "GIFTS THAT GIVE BACK",
     "marketTitle": "Find your little festive joy<span class=\"heading-star\" aria-hidden=\"true\">✳</span>",
-    "marketIntro": "Every gift is ¥100. All sales revenue will be donated.",
+    "marketIntro": "Prices are to be announced. All sales revenue will be donated.",
     "collectionNote": "Little gifts · Meaningful kindness",
     "categories": "Gift categories",
     "searchPlaceholder": "Find a little something…",
