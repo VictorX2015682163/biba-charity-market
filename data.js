@@ -43,7 +43,7 @@ globalThis.MARKET_CATEGORIES = [
   {
     "id": "lace",
     "icon": "spark",
-    "zh": "棱边饰品",
+    "zh": "梭编饰品",
     "en": "Tatted Jewelry"
   },
   {
@@ -147,7 +147,7 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 60%",
     "name": {
-      "zh": "莓果花语棱边套组",
+      "zh": "莓果花语梭编套组",
       "en": "Berry Blossom Tatted Set"
     },
     "subtitle": {
@@ -162,7 +162,7 @@ globalThis.MARKET_PRODUCTS = [
       "zh": "粉红色线条连成细密的花朵，红色小珠点缀其间。项链与耳饰呼应着同一种花纹，像把冬日里的一簇莓果悄悄收藏。",
       "en": "Delicate pink loops form a chain of flowers, dotted with tiny red beads. The necklace and earrings share a floral pattern, like a little cluster of winter berries."
     },
-    "keywords": "pink red necklace earrings tatting tatted set 粉 红 项链 耳环 耳饰 棱边 套组 莓果",
+    "keywords": "pink red necklace earrings tatting tatted set 粉 红 项链 耳环 耳饰 梭编 套组 莓果",
     "priceCents": 10000
   },
   {
@@ -423,7 +423,7 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 58%",
     "name": {
-      "zh": "冬日银光棱边套组",
+      "zh": "冬日银光梭编套组",
       "en": "Winter Shimmer Tatted Set"
     },
     "subtitle": {
@@ -434,7 +434,7 @@ globalThis.MARKET_PRODUCTS = [
       "zh": "浅银色的花形线条与细小珠饰交织，项链和耳饰呈现轻盈的层次。柔和的颜色，像冬日落在窗边的一束光。",
       "en": "Pale silver-colored floral loops intertwine with tiny beads in a matching necklace and earring set. Soft tones echo a quiet beam of winter light."
     },
-    "keywords": "silver white necklace earrings set tatting tatted 银 白 项链 耳环 棱边",
+    "keywords": "silver white necklace earrings set tatting tatted 银 白 项链 耳环 梭编",
     "priceCents": 10000
   },
   {
@@ -511,7 +511,7 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 58%",
     "name": {
-      "zh": "鎏光花影棱边套组",
+      "zh": "鎏光花影梭编套组",
       "en": "Golden Hour Tatted Set"
     },
     "subtitle": {
@@ -519,10 +519,10 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Necklace & matching earrings"
     },
     "description": {
-      "zh": "浅色棱边花纹的边缘缀着金色与深色珠饰，中央的暖色吊坠成为视觉焦点。项链与耳饰以层层花形纹样相互呼应。",
+      "zh": "浅色梭编花纹的边缘缀着金色与深色珠饰，中央的暖色吊坠成为视觉焦点。项链与耳饰以层层花形纹样相互呼应。",
       "en": "Golden and darker beads trace the pale tatted loops, framing a warm-toned centerpiece. Layered floral patterns connect the necklace and matching earrings."
     },
-    "keywords": "gold tatting tatted necklace earrings pendant 金色 项链 吊坠 耳环 棱边",
+    "keywords": "gold tatting tatted necklace earrings pendant 金色 项链 吊坠 耳环 梭编",
     "priceCents": 10000
   },
   {
@@ -545,7 +545,7 @@ globalThis.MARKET_PRODUCTS = [
       "zh": "浅粉色的细致编结串起小小光点，花形耳饰、戒指与水滴形吊坠相互呼应。柔和又细腻的一组粉色心意。",
       "en": "Fine blush-colored loops connect tiny highlights. Floral earrings, a ring and a teardrop pendant come together in a soft, delicately detailed set."
     },
-    "keywords": "pink ring necklace earrings pendant tatting tatted 粉 项链 耳环 戒指 套组 棱边",
+    "keywords": "pink ring necklace earrings pendant tatting tatted 粉 项链 耳环 戒指 套组 梭编",
     "priceCents": 10000
   },
   {
@@ -638,7 +638,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "polaroidLeft": "小小手作，满满心意",
     "polaroidRight": "把快乐串起来",
     "heroImage": "红绿相间的手工编织篮",
-    "roseImage": "粉红棱边项链与耳饰",
+    "roseImage": "粉红梭编项链与耳饰",
     "beadImage": "彩色串珠手链",
     "value1": "手作的温度",
     "value1Sub": "Made with care",
@@ -661,7 +661,7 @@ globalThis.MARKET_TRANSLATIONS = {
     "collectionEnd": "愿你找到那份刚刚好的心意。",
     "storyEyebrow": "SMALL THINGS, BIG HEART",
     "storyTitle": "礼物的美好，<br>从一双手开始。",
-    "storyBody": "一颗珠子，一缕丝线，一点奇思妙想。<br>从层层编结的棱边花纹，到色彩斑斓的串珠，<br>那些被认真对待的小细节，让礼物有了温度。",
+    "storyBody": "一颗珠子，一缕丝线，一点奇思妙想。<br>从层层编结的梭编花纹，到色彩斑斓的串珠，<br>那些被认真对待的小细节，让礼物有了温度。",
     "storyClosing": "这个圣诞，让手作的温暖，变成支持他人的力量。",
     "storyLink": "发现手作好物",
     "storyImage": "双手正在串起暖色珠子",
