@@ -524,5 +524,144 @@
   });
   artObserver.observe(heroArt);
   document.addEventListener('visibilitychange', updateHeroMotion);
+
+  function playEntrySnow() {
+    const canvas = $('.entry-snow');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    const context = canvas.getContext('2d');
+    if (!context || reducedMotion.matches || document.hidden) {
+      canvas.remove();
+      return;
+    }
+
+    // Cache the crystal shapes so the animation only composites small sprites.
+    const crystals = [0, 1, 2].map(variant => {
+      const sprite = document.createElement('canvas');
+      sprite.width = sprite.height = 64;
+      const brush = sprite.getContext('2d');
+      brush.translate(32, 32);
+      brush.beginPath();
+      for (let arm = 0; arm < 6; arm++) {
+        brush.moveTo(0, 0);
+        brush.lineTo(0, -25);
+        for (const branch of variant === 1 ? [11, 19] : [15]) {
+          brush.moveTo(-6, -branch - 5);
+          brush.lineTo(0, -branch);
+          brush.lineTo(6, -branch - 5);
+        }
+        brush.rotate(Math.PI / 3);
+      }
+      if (variant === 2) {
+        brush.moveTo(0, -8);
+        for (let corner = 1; corner <= 6; corner++) {
+          const angle = corner * Math.PI / 3;
+          brush.lineTo(Math.sin(angle) * 8, -Math.cos(angle) * 8);
+        }
+      }
+      brush.lineCap = brush.lineJoin = 'round';
+      brush.strokeStyle = variant === 1 ? '#739db8' : '#8daabd';
+      brush.lineWidth = 4;
+      brush.stroke();
+      brush.strokeStyle = variant === 1 ? '#dcefff' : '#f7fcff';
+      brush.lineWidth = 2.3;
+      brush.stroke();
+      return sprite;
+    });
+    const softSnow = document.createElement('canvas');
+    softSnow.width = softSnow.height = 64;
+    const softBrush = softSnow.getContext('2d');
+    const glow = softBrush.createRadialGradient(32, 32, 0, 32, 32, 30);
+    glow.addColorStop(0, '#f4fbffff');
+    glow.addColorStop(.25, '#dceeffc0');
+    glow.addColorStop(1, '#b6d6ed00');
+    softBrush.fillStyle = glow;
+    softBrush.fillRect(0, 0, 64, 64);
+
+    let width = innerWidth;
+    let height = innerHeight;
+    function resizeSnow() {
+      width = innerWidth;
+      height = innerHeight;
+      const scale = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * scale);
+      canvas.height = Math.round(height * scale);
+      context.setTransform(scale, 0, 0, scale, 0, 0);
+    }
+    resizeSnow();
+    const count = Math.min(650, Math.max(300, Math.round(width * height / 1800)));
+    const particles = Array.from({ length: count }, (_, index) => {
+      const depth = Math.random();
+      const isCrystal = index % 4 === 0;
+      const isSoft = index % 47 === 0;
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        speed: 45 + depth * 105,
+        wind: 25 + depth * 65,
+        phase: Math.random() * Math.PI * 2,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - .5) * .8,
+        size: isSoft ? 22 + depth * 28 : isCrystal ? 8 + depth * 16 : .6 + depth * 1.4,
+        opacity: isSoft ? .5 : .4 + depth * .6,
+        sprite: isSoft ? softSnow : isCrystal ? crystals[index % crystals.length] : null,
+        color: index % 3 === 0 ? '#edf7ff' : '#83a7c0'
+      };
+    });
+    let frame;
+    let started;
+    let previous;
+    function stopSnow() {
+      cancelAnimationFrame(frame);
+      canvas.remove();
+      window.removeEventListener('resize', resizeSnow);
+      document.removeEventListener('visibilitychange', stopWhenHidden);
+      reducedMotion.removeEventListener('change', stopSnow);
+    }
+    function stopWhenHidden() {
+      if (document.hidden) stopSnow();
+    }
+    function drawSnow(now) {
+      started ??= now;
+      previous ??= now;
+      const elapsed = now - started;
+      if (elapsed >= 3000) return stopSnow();
+      const delta = Math.min((now - previous) / 1000, .05);
+      previous = now;
+      const fade = Math.min(elapsed / 180, 1, (3000 - elapsed) / 450);
+      context.clearRect(0, 0, width, height);
+      for (const particle of particles) {
+        const drift = -particle.wind + Math.sin(elapsed / 850 + particle.phase) * 24;
+        particle.x += drift * delta;
+        particle.y += particle.speed * delta;
+        particle.angle += particle.spin * delta;
+        if (particle.y > height + 30) particle.y = -30;
+        if (particle.x < -30) particle.x = width + 30;
+        if (particle.x > width + 30) particle.x = -30;
+        context.globalAlpha = particle.opacity * fade;
+        if (particle.sprite) {
+          context.save();
+          context.translate(particle.x, particle.y);
+          context.rotate(particle.angle);
+          context.drawImage(particle.sprite, -particle.size / 2, -particle.size / 2, particle.size, particle.size);
+          context.restore();
+        } else {
+          context.strokeStyle = particle.color;
+          context.lineWidth = particle.size;
+          context.lineCap = 'round';
+          context.beginPath();
+          context.moveTo(particle.x, particle.y);
+          context.lineTo(particle.x - drift * .035, particle.y - particle.speed * .035);
+          context.stroke();
+        }
+      }
+      frame = requestAnimationFrame(drawSnow);
+    }
+    window.addEventListener('resize', resizeSnow);
+    document.addEventListener('visibilitychange', stopWhenHidden);
+    reducedMotion.addEventListener('change', stopSnow);
+    frame = requestAnimationFrame(drawSnow);
+  }
+
   setLanguage(state.lang);
+  playEntrySnow();
 })();
