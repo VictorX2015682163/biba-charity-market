@@ -117,28 +117,6 @@ globalThis.MARKET_PRODUCTS = [
     "priceCents": 10000
   },
   {
-    "id": "turquoise-rosette",
-    "category": "lace",
-    "images": [
-      "202"
-    ],
-    "position": "50% 50%",
-    "name": {
-      "zh": "青碧花窗饰",
-      "en": "Turquoise Rosette"
-    },
-    "subtitle": {
-      "zh": "Turquoise Rosette",
-      "en": "Aqua beads and silver-colored loops"
-    },
-    "description": {
-      "zh": "银色线圈勾出花窗的轮廓，青绿色小珠围着中央的水滴形亮饰。",
-      "en": "Aqua beads tip each silver-colored loop around a faceted, teardrop-shaped center."
-    },
-    "keywords": "aqua turquoise teal flower rosette teardrop 蓝 绿 青碧 花窗 水滴 花纹 小饰",
-    "priceCents": 10000
-  },
-  {
     "id": "rose-lace",
     "category": "lace",
     "images": [
@@ -163,28 +141,6 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Delicate pink loops form a chain of flowers, dotted with tiny red beads. The necklace and earrings share a floral pattern, like a little cluster of winter berries."
     },
     "keywords": "pink red necklace earrings tatting tatted set 粉 红 项链 耳环 耳饰 梭编 套组 莓果",
-    "priceCents": 10000
-  },
-  {
-    "id": "snow-crystal",
-    "category": "lace",
-    "images": [
-      "207"
-    ],
-    "position": "50% 50%",
-    "name": {
-      "zh": "六角雪花饰",
-      "en": "Snow Crystal Motif"
-    },
-    "subtitle": {
-      "zh": "Snow Crystal Motif",
-      "en": "Six white branches with beaded tips"
-    },
-    "description": {
-      "zh": "六瓣花心伸出雪花的枝杈，每一端都点着透亮的小珠。",
-      "en": "Six branches extend from a flower-shaped center, each finished with little translucent beads."
-    },
-    "keywords": "snowflake crystal white star snow christmas 六角 白 雪 雪花 冬 圣诞 小饰",
     "priceCents": 10000
   },
   {
@@ -259,28 +215,6 @@ globalThis.MARKET_PRODUCTS = [
       "en": "Layered petals, delicate leaves and little pearly accents. Each flower in the collection has its own palette, like a tiny garden you can take with you."
     },
     "keywords": "flowers floral accessory hair brooch 花 花饰 发饰 胸针 叶片",
-    "priceCents": 10000
-  },
-  {
-    "id": "pearl-sprig",
-    "category": "lace",
-    "images": [
-      "205"
-    ],
-    "position": "50% 50%",
-    "name": {
-      "zh": "雪枝珠光项链",
-      "en": "Snowdrop Necklace"
-    },
-    "subtitle": {
-      "zh": "Snowdrop Necklace",
-      "en": "White openwork and pearl-like beads"
-    },
-    "description": {
-      "zh": "白线绕成一串相连的枝叶，圆润的珠饰沿着领口排开。",
-      "en": "White thread forms a row of leafy sprigs, with round, pearl-like beads spaced along the neckline."
-    },
-    "keywords": "snowdrop white necklace pearl bridal 冬 雪 白色 珠光 项链 颈饰",
     "priceCents": 10000
   },
   {
