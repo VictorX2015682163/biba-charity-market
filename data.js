@@ -76,18 +76,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "红白圣诞星",
-      "en": "Scarlet Christmas Star"
+      "zh": "绯雪圣诞星",
+      "en": "Scarlet Snow Christmas Star"
     },
     "subtitle": {
-      "zh": "Scarlet Christmas Star",
-      "en": "Red beads and snowy tips"
+      "zh": "Scarlet Snow Christmas Star",
+      "en": "A little winter glow"
     },
     "description": {
-      "zh": "五瓣红色珠纹围出一颗星，白色棱珠落在花心和五个尖角。",
-      "en": "Rows of red beads form a five-pointed star, with white beads around the center and at each tip."
+      "zh": "绯红珠光沿着五瓣花纹悄悄绽开，雪白的小珠轻落其间，像冬夜里亮起的一颗圣诞星。把这一点温暖的光，送给心里惦念的人。",
+      "en": "Scarlet beads bloom along five delicate petals, touched with snowy white accents like a Christmas star glowing in the winter night. A little warmth for someone close to your heart."
     },
-    "keywords": "red white star scarlet christmas festive holiday 五角星 星星 圣诞 红 白 串珠 饰物",
+    "keywords": "red white star scarlet christmas festive holiday 五角星 星星 圣诞 红 白 串珠 饰物 红白圣诞星 Scarlet Christmas Star",
     "priceCents": 10000
   },
   {
@@ -225,18 +225,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "绯红花冠项链",
-      "en": "Crimson Garland Necklace"
+      "zh": "绯红花影项链",
+      "en": "Crimson Blossom Necklace"
     },
     "subtitle": {
-      "zh": "Crimson Garland Necklace",
-      "en": "Deep red accents and bronze-colored loops"
+      "zh": "Crimson Blossom Necklace",
+      "en": "A garden glowing at dusk"
     },
     "description": {
-      "zh": "古铜色与深色小珠围起一圈花纹，绯红的亮饰点在花纹中央。",
-      "en": "Bronze-colored loops and dark beads form a garland of flowers with deep red centers."
+      "zh": "绯红的光藏在层叠花纹深处，古铜色线结与细珠缓缓铺开，像暮色中仍在盛放的花园。沿着颈间留下一抹浓郁而温柔的冬日色彩。",
+      "en": "Deep crimson glows within layered flowers, framed by bronze-colored knots and tiny beads like a garden still blooming at dusk. Rich, gentle color brings warmth to the neckline."
     },
-    "keywords": "crimson garnet red bronze necklace 花冠 酒红 深红 古铜 复古 项链",
+    "keywords": "crimson garnet red bronze necklace 花冠 酒红 深红 古铜 复古 项链 绯红花冠项链 Crimson Garland Necklace",
     "priceCents": 10000
   },
   {
@@ -247,18 +247,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "墨夜花章项链",
-      "en": "Midnight Medallion Necklace"
+      "zh": "墨夜流光项链",
+      "en": "Midnight Shimmer Necklace"
     },
     "subtitle": {
-      "zh": "Midnight Medallion Necklace",
-      "en": "Black beads and an openwork border"
+      "zh": "Midnight Shimmer Necklace",
+      "en": "Quiet flowers after dark"
     },
     "description": {
-      "zh": "深墨色的小珠密密围成花章，下缘以镂空的环形花纹收边。",
-      "en": "Closely spaced black beads form dark medallions above an openwork border."
+      "zh": "墨色细珠凝成一朵朵静静绽放的花，细密的光泽在镂空弧线间若隐若现。像把夜色轻轻拢在颈边，每一处花影都藏着细看才发现的光。",
+      "en": "Inky beads gather into quiet blossoms, their subtle shimmer appearing between openwork curves. Like a little night garden at the neckline, each flower holds a glint waiting to be noticed."
     },
-    "keywords": "black ink dark midnight medallion necklace 黑 墨色 花章 项链",
+    "keywords": "black ink dark midnight medallion necklace 黑 墨色 花章 项链 墨夜花章项链 Midnight Medallion Necklace",
     "priceCents": 10000
   },
   {
@@ -269,18 +269,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "冰蓝花章项链",
-      "en": "Ice Blue Medallion Necklace"
+      "zh": "冰蓝月影项链",
+      "en": "Frosted Moonlight Necklace"
     },
     "subtitle": {
-      "zh": "Ice Blue Medallion Necklace",
-      "en": "Pale blue beads and lilac accents"
+      "zh": "Frosted Moonlight Necklace",
+      "en": "Moonlight resting on winter blooms"
     },
     "description": {
-      "zh": "冰蓝色的细珠连成一排花章，圆心里的淡紫色点缀映出柔光。",
-      "en": "Pale blue beads circle softly lilac centers in a row of scalloped medallions."
+      "zh": "冰蓝细珠簇拥着淡紫色柔光，一朵朵花章相连，仿佛月色停在结霜的花瓣上。清浅的光影沿颈间铺展，留下冬日独有的宁静与柔美。",
+      "en": "Icy blue beads surround soft lilac centers, linking blossoms like moonlight resting on frosted petals. Pale, quiet color traces the neckline with the stillness of a winter evening."
     },
-    "keywords": "ice blue lilac pale silver medallion necklace 冰蓝 银蓝 淡紫 花章 项链",
+    "keywords": "ice blue lilac pale silver medallion necklace 冰蓝 银蓝 淡紫 花章 项链 冰蓝花章项链 Ice Blue Medallion Necklace",
     "priceCents": 10000
   },
   {
@@ -291,18 +291,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "墨金环纹颈饰",
-      "en": "Black and Gold Collar"
+      "zh": "墨金夜曲颈饰",
+      "en": "Golden Nocturne Collar"
     },
     "subtitle": {
-      "zh": "Black and Gold Collar",
-      "en": "Layered black loops with a gold-colored band"
+      "zh": "Golden Nocturne Collar",
+      "en": "A golden line through the night"
     },
     "description": {
-      "zh": "内圈的金色细节与外圈的深色环纹叠在一起，沿着领口围成扇形花边。",
-      "en": "A narrow band of gold-colored accents sits inside rows of dark loops that scallop the neckline."
+      "zh": "一弯暖金色穿过墨色花边，层层环纹沿颈间舒展，像夜幕里缓缓流动的灯光。明暗交织的细节，为冬日衣领添上一段温柔的夜曲。",
+      "en": "A warm golden curve runs through dark openwork, its looping edges unfolding like lights across the evening. The play of light and shadow lends a gentle rhythm to a winter neckline."
     },
-    "keywords": "dark black gold collar necklace 黑 金 墨色 双层 环纹 颈饰 项链",
+    "keywords": "dark black gold collar necklace 黑 金 墨色 双层 环纹 颈饰 项链 墨金环纹颈饰 Black and Gold Collar",
     "priceCents": 10000
   },
   {
@@ -313,18 +313,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "银白花环饰",
-      "en": "Silver Wreath Motif"
+      "zh": "银月花环饰",
+      "en": "Moonlit Wreath Motif"
     },
     "subtitle": {
-      "zh": "Silver Wreath Motif",
-      "en": "Silver-colored thread and a black scalloped border"
+      "zh": "Moonlit Wreath Motif",
+      "en": "A small wreath of moonlit flowers"
     },
     "description": {
-      "zh": "银白色线结首尾相连绕成花环，纤细的黑色花边勾出内外两道轮廓。",
-      "en": "Silver-colored knots form an open wreath, edged inside and out with fine black scallops."
+      "zh": "银白线结一朵接一朵，围成月光般柔亮的花环，细细的墨色花边勾出轻盈轮廓。像把冬夜窗前的一圈霜花，悄悄收藏在掌心。",
+      "en": "Silver-white knots blossom into a softly glowing wreath, outlined by fine dark scallops. It recalls a circle of frost flowers on a winter window, small enough to treasure in your palm."
     },
-    "keywords": "silver white black wreath circle hoop motif 银 白 黑 环形 圆环 花环 饰物",
+    "keywords": "silver white black wreath circle hoop motif 银 白 黑 环形 圆环 花环 饰物 银白花环饰 Silver Wreath Motif",
     "priceCents": 10000
   },
   {
@@ -335,18 +335,18 @@ globalThis.MARKET_PRODUCTS = [
     ],
     "position": "50% 50%",
     "name": {
-      "zh": "棕金藤纹链饰",
-      "en": "Bronze Vine Chain"
+      "zh": "暮金藤影链饰",
+      "en": "Golden Dusk Vine Chain"
     },
     "subtitle": {
-      "zh": "Bronze Vine Chain",
-      "en": "Scrolls of brown thread and gold-colored beads"
+      "zh": "Golden Dusk Vine Chain",
+      "en": "The last light among the vines"
     },
     "description": {
-      "zh": "棕色线圈沿着链身交错相扣，点点金色小珠缀在藤纹两边。",
-      "en": "Interlocking brown loops run along a slender chain, edged with clusters of gold-colored beads."
+      "zh": "暖棕色线结蜿蜒成细细的藤蔓，金色小珠像枝头还未散去的夕照。轻盈的花纹一路相伴，把冬日下午的一缕暖光，编进日常的小小心意。",
+      "en": "Warm brown knots wind into a slender vine, dotted with golden-colored beads like the last sunlight caught on its branches. Delicate loops carry a little afternoon warmth into an everyday gift."
     },
-    "keywords": "bronze gold vine chain clasp brown 金 棕 古铜 藤纹 链饰",
+    "keywords": "bronze gold vine chain clasp brown 金 棕 古铜 藤纹 链饰 棕金藤纹链饰 Bronze Vine Chain",
     "priceCents": 10000
   },
   {
